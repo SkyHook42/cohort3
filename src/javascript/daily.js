@@ -17,7 +17,6 @@ function compareTwo(p1,p2) {
 }
 export default compareTwo;
 
-// and before this comment ---
 // assertEquals("a","b");
 // assertEquals("a","a");
 // assertEquals(1,2);
