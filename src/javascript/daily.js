@@ -15,13 +15,26 @@ const functions = {
 // daily - Prepare for Array Work - 2011015
 
 	prepArrWork: (arr) => {
-	// for
-	// while
-	// do while
-	// Next Level:
-	// for in
-	// for of
-	return arr;
+		// Next Level:
+		// for in
+		// for of
+
+		// first level:
+		// for
+		// while
+
+		// do while
+		let i=0;
+		let tempArr = [];
+		console.log(tempArr);
+		do { 
+			tempArr = arr.map((arrElement) => arrElement+i);
+			console.log(tempArr);
+			i++;
+		}
+		while (i < arr.length);
+		tempArr = arr.map((arrElement)=> arrElement-arr.length);
+		return tempArr;
 	},
 
 	// daily - makeEmailArr

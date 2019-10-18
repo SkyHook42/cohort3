@@ -7,8 +7,6 @@ test('prepare for array work', () => {
 	// 	.toEqual();
 	expect(functions.prepArrWork(loopArr))
 		.toEqual([1,2,3,4,5]);
-	// expect(functions.makeEmailArr(["Bill", "Smith"]))
-	// 	.toEqual("bill.smith@evolveu.ca");
 });
 
 test('email builder from an array', () => {
