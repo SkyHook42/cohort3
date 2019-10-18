@@ -21,20 +21,29 @@ const functions = {
 
 		// first level:
 		// for
-		// while
 
-		// do while
 		let i=0;
 		let tempArr = [];
-		console.log(tempArr);
-		do { 
-			tempArr = arr.map((arrElement) => arrElement+i);
-			console.log(tempArr);
-			i++;
-		}
-		while (i < arr.length);
-		tempArr = arr.map((arrElement)=> arrElement-arr.length);
-		return tempArr;
+		// function funcLoop(){
+			// return total+"while loop";
+			// // while
+			// while (i < 10) {
+			// 	console.log(tempArr);
+			// 	// text += "The number is " + i;
+			// 	// tempArr = tempArr.reduce(funcWhile);
+			// 	i++;
+			// // reverse "while" mod with exercise method, for testing
+
+			// do while
+			do { 
+				tempArr = arr.map((arrElement) => arrElement+i);
+				console.log(tempArr);
+				i++;
+			}
+			while (i < arr.length);
+			//reverse "do while" mod with exercise method, for testing
+			tempArr = tempArr.map((arrElement) => arrElement-(arr.length-1));
+			return tempArr;
 	},
 
 	// daily - makeEmailArr
