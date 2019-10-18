@@ -1,3 +1,5 @@
+import { tsNamespaceExportDeclaration } from "@babel/types";
+
 // import { booleanLiteral } from "@babel/types";
 
 const functions = {
@@ -15,35 +17,52 @@ const functions = {
 // daily - Prepare for Array Work - 2011015
 
 	prepArrWork: (arr) => {
-		// Next Level:
-		// for in
-		// for of
-
-		// first level:
-		// for
-
 		let i=0;
-		let tempArr = [];
-		// function funcLoop(){
-			// return total+"while loop";
-			// // while
-			// while (i < 10) {
-			// 	console.log(tempArr);
-			// 	// text += "The number is " + i;
-			// 	// tempArr = tempArr.reduce(funcWhile);
-			// 	i++;
-			// // reverse "while" mod with exercise method, for testing
+		let tempArr = arr;
+		// Next Level:
+		// "for in" exercise
+		// "for of" exercise
 
-			// do while
-			do { 
-				tempArr = arr.map((arrElement) => arrElement+i);
-				console.log(tempArr);
-				i++;
+		// "for" exercise
+		// let range = 2 //range width for filter array
+		// const rangeMod = function rangeIn(range){
+		// 	return ;
+		// }
+
+		// i=0;
+		// for (i=0; i<arr.length; i++){
+		// 	console.log("'while & .filter' incrementing ", range,"\n");
+		// }
+
+		// "while" exercise
+		i=0;
+		while (i < arr.length) {
+			function reduceFunc(total, nextElement){
+			return total - nextElement;
 			}
-			while (i < arr.length);
-			//reverse "do while" mod with exercise method, for testing
-			tempArr = tempArr.map((arrElement) => arrElement-(arr.length-1));
-			return tempArr;
+
+			// tempArr = 
+			let reduceMethod = arr.reduce(reduceFunc);
+			console.log("'while & .reduce' incrementing subtraction ", 
+				reduceMethod-i,"\n");
+				//rebuild array for testing
+				//tempArr.push(reduceMethod+i);
+				//tempArr.reverse();
+			i++;
+		}
+	
+		// "do while" exercise
+		i=0;
+		do { 
+		let consoleReport = tempArr.map((arrElement) => arrElement+i);
+			console.log("'do while & .map' incrementing addition ",
+				consoleReport,"\n");
+			i++;
+		}
+		while (i < arr.length);
+		//reverse "do whilem .map" mod for testing
+		// tempArr = tempArr.map((arrElement) => arrElement-(arr.length-1));
+		return tempArr;
 	},
 
 	// daily - makeEmailArr
@@ -52,19 +71,16 @@ const functions = {
 		return str.toLowerCase();
 	},
 	// daily - AssertEquals
-	// Larry says do not use switch for only two outcomes
-	compareTwo: (p1,p2) => { 
+	// Larry says no switch command for only two outcomes
+	compareTwo: (p1,p2) => {
 		let myBool = false;
-		switch (p1==p2) {
-			case true:
-				myBool = true;
-			break;
-			case false:
-				myBool = false;
-				console.log("\n*** the two values are not the same\np1--> ",p1, "\np2--> ",p2);
-			break;
-			default:
-				console.log("compareTwo default fail");
+		if (p1==p2) {
+			myBool = true;
+		}
+		else {
+			myBool = false;
+			console.log("*** the two values are not the same\np1--> ",p1,
+				"\np2--> ",p2,"\n");
 		}
 		return myBool;
 	}
