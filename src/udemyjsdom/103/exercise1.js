@@ -27,9 +27,11 @@ false - true //guess: -1, actual: -1
 "A" > "B" //guess: true, actual: false - ? I thought caps came in order?
 "B" < "C" //guess: false, actual: true - rule holds, uphill not downhill
 "a" > "A" //guess: false, actual: true - so lc before uc too
+//okay, I looked it up, basic ASCII but I had it inverted
 "b" < "A" //guess: false, actual: false
 true === false //guess: false, actual: false
 true != true //guess: false, actual: false
 
 // Make the string: "Hi There! It's "sunny" out" by using the + sign:
-var list = [3,2,1,'d','e','r','f','VJJJ','K','D','S','A'];
+str = '"Hi There! It\'s '+'"sunny" out"';
+// probably better to use all breakouts to avoid quote chaos
