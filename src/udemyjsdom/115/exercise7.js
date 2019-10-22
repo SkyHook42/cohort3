@@ -19,3 +19,35 @@ let newsfeed=[
 		timeline:"thegoodplace",
 	},
 ];
+
+//from exercise practice:
+// let userProfile = {
+// }
+// userProfile.username = "Billy";
+// userProfile.password = "billybilly";
+// const database=[userProfile];
+
+// const newsfeed=[
+// 	{
+// 		username:"tom",
+// 		timeline:"iliketurtles",
+// 	},	{
+// 		username:"dick",
+// 		timeline:"orangeisthenewblack",
+// 	},	{
+// 		username:"harry",
+// 		timeline:"thegoodplace",
+// 	},
+// ];
+
+// const userNamePrompt=prompt("Enter your username?");
+// const passwordPrompt=prompt("Enter your password?");
+// const signIn = function(user,pass){
+// 	if (user===database[0].username &&
+// 		pass===database[0].password){
+// 		console.log(newsfeed);
+// 	} else {
+// 	alert("Sorry, incorrect username or password.")
+// 	};
+// };
+// signIn(userNamePrompt,passwordPrompt);
