@@ -2,9 +2,9 @@
 //It was written for every following routine to assume the previous was successful.
 //#region initialization
 	// using this array,
-	var array=["Banana", "Apples", "Oranges", "Blueberries"];
-	var consoleArr=[];
-	var consoleString='';
+	let array=["Banana", "Apples", "Oranges", "Blueberries"];
+	let consoleArr=[];
+	let consoleString='';
 //#endregion initialization
 
 //#region 1. Remove the Banana from the array.
@@ -46,7 +46,7 @@
 //#endregion 5. Sort the array in reverse order.
 
 //#region "using this array" access "Oranges".
-	var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+	let array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 	consoleString='"Oranges accessed: ';
 	consoleArr=array2[1][1];
 	console.log(consoleString+consoleArr.join(', '));
