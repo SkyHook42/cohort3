@@ -11,8 +11,19 @@ let todosLength=todos.length;
 // 	todos.pop();
 // }
 
-let counter1=0;
-while (counter1<10){
-	console.log(counter1);
-	counter1++;
+// let counter1=10;
+// while (counter1>0){
+// 	console.log(counter1);
+// 	counter1--;
+// }
+
+// var counter2 = 10;
+// do {
+// 	console.log(counter2);
+// 	counter2--;
+// } while(counter2>10);
+
+function logTodos(todos) {
+	console.log(todos);
 }
+todos.forEach(logTodos);

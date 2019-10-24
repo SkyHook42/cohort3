@@ -16,7 +16,7 @@ let newsfeed=[
 		timeline:"orangeisthenewblack",
 	},	{
 		username:"harry",
-		timeline:"thegoodplace",
+		timeline:"thegoodplace",	
 	},
 ];
 
@@ -40,14 +40,15 @@ let newsfeed=[
 // 	},
 // ];
 
-// const userNamePrompt=prompt("Enter your username?");
-// const passwordPrompt=prompt("Enter your password?");
-// const signIn = function(user,pass){
-// 	if (user===database[0].username &&
-// 		pass===database[0].password){
-// 		console.log(newsfeed);
-// 	} else {
-// 	alert("Sorry, incorrect username or password.")
-// 	};
-// };
-// signIn(userNamePrompt,passwordPrompt);
+const userNamePrompt=prompt("Enter your username?");
+const passwordPrompt=prompt("Enter your password?");
+const signIn = function(user,pass)
+	{
+		if (user===database[0].username &&
+			pass===database[0].password){
+			console.log(newsfeed);
+		} else {
+		alert("Sorry, incorrect username or password.")
+	};
+};
+signIn(userNamePrompt,passwordPrompt);
