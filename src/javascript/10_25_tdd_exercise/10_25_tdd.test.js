@@ -12,13 +12,13 @@ rinse and repeat:
 6	refactor
 */
 
+/* testing the plumbing */
 import functions from "./10_25_tdd.js";
 
-test('test driven practice', () => {
-	console.log("hello world from 10_25_tdd.test");
+test('TDD practice', () => {
+	console.log("10_25_tdd.test says hello");
 	functions.hello();
-	expect(functions.sum(1,2)).toEqual(5);
+	expect(functions.sum(1,2)).toEqual(3);
+	expect(functions.sum(-1,-2)).toEqual(-3);
+	expect(functions.sum("bob","smith")).toEqual(NaN);
 });
-
-	// expect(functions.helloWorld())
-	// .toEqual();
