@@ -41,17 +41,19 @@ const inputLength=function(){
 const liModChoice=function(ev){
 	// choose which li element child was selected
 	if (ev.target.tagName==="LI"){
-		return togClass(ev.target);
+		togClass(ev.target);
+	} else if (ev.target.tagName==="BUTTON"){
+		delLiAfterClick(ev.target);
 	}
-	return delLiAfterClick(ev.target);
 }
 
 const togClass=function(evElement){
 	// toggle strikethrough appearance with class
 	if(evElement.className==="done"){
-		return evElement.removeAttribute("class");
+		evElement.removeAttribute("class");
+	} else {
+		evElement.setAttribute("class","done");
 	}
-	return evElement.setAttribute("class","done");
 }
 
 enterButt.addEventListener("click", addLiAfterClick);
