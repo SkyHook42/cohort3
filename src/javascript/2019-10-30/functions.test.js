@@ -24,8 +24,6 @@ test("more TDD practice", () =>{
   // expect(functions.hello(17)).toEqual(17);
 });
 
-
-
 // test('TDD practice', () => {
 // 	console.log("10_25_tdd.test says hello");
 // 	functions.hello();

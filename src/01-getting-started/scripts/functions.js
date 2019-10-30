@@ -52,12 +52,14 @@ const functions = {
 		let taxBase = 0;
 		let taxSum = 0;
 		
-		if (incIn >= 0){
-			taxSum = incIn*rateA;
+    if (incIn >= 0){
+      taxBase = incIn*rateA;
+      return taxBase ;
 		}
 		if (incIn > roofA){
 			taxBase = taxBase+(roofA*rateA);
-			taxSum = taxBase+((incIn-roofA)*rateB);
+      b2 = taxBase+((incIn-roofA)*rateB);
+      return 0;
 		}
 		if (incIn > roofB){
 			taxBase = taxBase+((roofB-roofA)*rateB);

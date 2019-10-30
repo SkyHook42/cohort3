@@ -2,10 +2,11 @@ import functions from './functions'
 
 // Exercise - Canadian Taxes
 test('tax calculator', () => {
-  let income=300000;
+  let income=1;
+
   // let income=[0,1000,47630,95259,147667,210371,300000];
-  // let tax=[0,150,7144.5,16908.445,30534.525,48718.685,78296.s255]
-  expect(functions.helloTaxWorld(income)).toEqual(78296.255);
+  // let tax=[0,150,7144.5,16908.445,30534.525,48718.685,78296.255]
+  // expect(functions.helloTaxWorld(income)).toEqual(78296.255);
   // expect(functions.helloTaxWorld(income)).toEqual(7637.2);
   // let i=0;
   // do {
@@ -16,7 +17,12 @@ test('tax calculator', () => {
   // }
   // while (i< income.length);
 });
-
+test("geoff's ", ()=> {
+  let income = [1,2,50000];
+  expect(functions.helloTaxWorld(income[0])).toBe(0.15);
+  expect(functions.helloTaxWorld(income[1])).toBe(0.30);
+  expect(functions.helloTaxWorld(income[2])).toBe(9);
+});
 // Exercise - Calculator
 
 // Exercise - Basic Syntax
