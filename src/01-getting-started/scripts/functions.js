@@ -1,9 +1,8 @@
-// Canadian Taxes
-// Exercise - Canadian Taxes
-// - 2019 data
+// #region - Canadian Taxes
+// Canadian Taxes - 2019 data
 // Start a new section on the same page as the last exercise.
 
-// add a new heading “Canadian Taxes” 
+// add a new heading “Canadian Taxes”
 // review https://www.canada.ca/en/revenue-agency/services/tax/individuals/frequently-asked-questions-individuals/canadian-income-tax-rates-individuals-current-previous-years.html#federal
 // CRA sometimes uses rounded or imprecise numbers in their sample calculations; in our case we will use exact calculations
 // create a wireframe for the user interface to do the tax calculation
@@ -39,44 +38,64 @@
 
 
 const functions = {
-	helloTaxWorld: (incIn)=>{
+	cdnTaxes: (incIn)=>{
+    // Canadian Tax calculator - main
+    // given bracket roofs are inclusive
 		const roofA = 47630;
 		const roofB = 95259;
 		const roofC = 147667;
-		const roofD = 210371;
-		const rateA = 0.15;//presented as percentage
-		const rateB = 0.205;//presented as percentage
-		const rateC = 0.26;//presented as percentage
-		const rateD = 0.29;//presented as percentage
-		const rateE = 0.33;//presented as percentage
+    const roofD = 210371;
+    // given bracket rates as real number percentages
+		const rateA = 15;
+		const rateB = 20.5;
+		const rateC = 26;
+		const rateD = 29;
+		const rateE = 33;
 		let taxBase = 0;
 		let taxSum = 0;
-		
-    if (incIn >= 0){
-      taxBase = incIn*rateA;
-      return taxBase ;
-		}
-		if (incIn > roofA){
-			taxBase = taxBase+(roofA*rateA);
-      b2 = taxBase+((incIn-roofA)*rateB);
-      return 0;
-		}
-		if (incIn > roofB){
-			taxBase = taxBase+((roofB-roofA)*rateB);
-			taxSum = taxBase+((incIn-roofB)*rateC);
-		}
-		if (incIn > roofC){
-			taxBase = taxBase+((roofC-roofB)*rateC);
-			taxSum = taxBase+((incIn-roofC)*rateD);
-		}
-		if (incIn > roofD){
-			taxBase = taxBase+((roofD-roofC)*rateD);
-			taxSum = taxBase+((incIn-roofD)*rateE);
-		}
-		console.log(taxBase);
+
+    // find full bracket tax
+    // calc remainder tax over highest bracket
+    // return full plus remainder to web page
+    if (incIn <= roofA){
+      console.log("inside roofA if");
+      return incIn*functions.pctRate(rateA);
+    } else if (incIn <= roofB){
+      console.log("inside roofB if");
+      return incIn*functions.pctRate(rateB);
+    }
+    return;
+  },
+
+  pctRate: (pctIn)=>{
+    // convert readable percentage into algebra decimal
+    return pctIn/100;
+  },
+
+    // return taxSum;
+
+    // if (incIn >= 0){
+    //   taxBase = incIn*rateA;
+    //   return taxBase ;
+		// }
+		// if (incIn > roofA){
+		// 	taxBase = taxBase+(roofA*rateA);
+    //   b2 = taxBase+((incIn-roofA)*rateB);
+    //   return 0;
+		// }
+		// if (incIn > roofB){
+		// 	taxBase = taxBase+((roofB-roofA)*rateB);
+		// 	taxSum = taxBase+((incIn-roofB)*rateC);
+		// }
+		// if (incIn > roofC){
+		// 	taxBase = taxBase+((roofC-roofB)*rateC);
+		// 	taxSum = taxBase+((incIn-roofC)*rateD);
+		// }
+		// if (incIn > roofD){
+		// 	taxBase = taxBase+((roofD-roofC)*rateD);
+		// 	taxSum = taxBase+((incIn-roofD)*rateE);
+		// }
 		// console.log(taxSum);
-		return taxSum;
-	},
 
 	// convertPctDec: ()=>{
 	// 	console.log("inside convertPctDec");

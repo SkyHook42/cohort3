@@ -1,55 +1,55 @@
-//#region - daily - loopStaff
-	// Write a function that will take an array and return an array of emails. The new function you are writing today will call makeEmailObj that you have written in a previous exercise. 
-
-	// Copy and paste the code provided and you know the rest of the stick...Test first.
-
-	// /*
-	//     Sample data for the next few exercises.
-	// */
-
-	// const data = {
-	//     staff: [
-	//         { fname: "Jane", lname: "Smith", balance: 10 },
-	//         { fname: "Liam", lname: "Henry", balance: 1000 },
-	//         { fname: "Emma", lname: "Jones", balance: 1330 },
-	//         { fname: "Olivia", lname: "Notly", balance: 310 },
-	//         { fname: "Noah", lname: "Ho", balance: 503 },
-	//         { fname: "William", lname: "Lee", balance: 520 },
-	//         { fname: "Benjamin", lname: "Amis", balance: 150 },
-	//     ],
-	//     company: "EvolveU",
-	//     city: "Calgary",
-	//     prov: "Alberta"
-	// };
-
-/*	
-	Write the function to build email addresses for the company.
-*/
-
-	// test('email builder for company', () => {
-	//     const staffEmail = functions.loopStaff(data.staff);
-	//     expect(staffEmail[0])
-	//         .toEqual("jane.smith@evolveu.ca");
-	//     expect(staffEmail[3])
-	//         .toEqual("olivia.notly@evolveu.ca");
-	//     expect(staffEmail[6])
-	//         .toEqual("benjamin.amis@evolveu.ca");
-	// });
-	//#endregion - daily - loopStaff
-
-//#region - daily - What’s my coverage
-	// Run your coverage report and send the output to Larry as a pdf file. Follow these steps:
-
-	// run your coverage report: npm test -- --coverage
-	// look at the html file created: code/<<your repository>>/coverage/lcov-report/index.html
-	// view in the browser. A double click on the file should do it
-	// right-click and select the “Print” option
-	// print to pdf
-	// email Larry the pdf (we will be doing this a few more times in the following weeks)
-//#endregion - daily - What’s my coverage
-
 //#region - daily functions object
-	const functions = {
+const functions = {
+		//#region - daily - loopStaff
+			// Write a function that will take an array and return an array of emails. The new function you are writing today will call makeEmailObj that you have written in a previous exercise. 
+		
+			// Copy and paste the code provided and you know the rest of the stick...Test first.
+		
+			// /*
+			//     Sample data for the next few exercises.
+			// */
+		
+			// const data = {
+			//     staff: [
+			//         { fname: "Jane", lname: "Smith", balance: 10 },
+			//         { fname: "Liam", lname: "Henry", balance: 1000 },
+			//         { fname: "Emma", lname: "Jones", balance: 1330 },
+			//         { fname: "Olivia", lname: "Notly", balance: 310 },
+			//         { fname: "Noah", lname: "Ho", balance: 503 },
+			//         { fname: "William", lname: "Lee", balance: 520 },
+			//         { fname: "Benjamin", lname: "Amis", balance: 150 },
+			//     ],
+			//     company: "EvolveU",
+			//     city: "Calgary",
+			//     prov: "Alberta"
+			// };
+		
+			/*	
+				Write the function to build email addresses for the company.
+			*/
+		
+			// test('email builder for company', () => {
+			//     const staffEmail = functions.loopStaff(data.staff);
+			//     expect(staffEmail[0])
+			//         .toEqual("jane.smith@evolveu.ca");
+			//     expect(staffEmail[3])
+			//         .toEqual("olivia.notly@evolveu.ca");
+			//     expect(staffEmail[6])
+			//         .toEqual("benjamin.amis@evolveu.ca");
+			// });
+		//#endregion - daily - loopStaff
+
+		//#region - daily - What’s my coverage
+			// Run your coverage report and send the output to Larry as a pdf file. Follow these steps:
+		
+			// run your coverage report: npm test -- --coverage
+			// look at the html file created: code/<<your repository>>/coverage/lcov-report/index.html
+			// view in the browser. A double click on the file should do it
+			// right-click and select the “Print” option
+			// print to pdf
+			// email Larry the pdf (we will be doing this a few more times in the following weeks)
+		//#endregion - daily - What’s my coverage
+
 		//#region - daily - More Array Work
 		// Read the documentation on the following and create examples of each one:
 		// slice
@@ -148,5 +148,4 @@
 		//#endregion - daily - assertEquals
 	}
 //#endregion - daily functions object
-
 export default functions;

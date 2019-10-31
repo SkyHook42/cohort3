@@ -21,7 +21,7 @@ import functions from "./functions.js";
 
 test("more TDD practice", () =>{
   console.log("functions.test.js says hello");
-  // expect(functions.hello(17)).toEqual(17);
+  functions.hello();
 });
 
 // test('TDD practice', () => {
