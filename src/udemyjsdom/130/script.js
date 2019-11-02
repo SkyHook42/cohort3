@@ -1,26 +1,27 @@
-// var button = document.getElementById("enter");
-// var input = document.getElementById("userinput");
-// var ul = document.querySelector("ul");
-
 let css = document.querySelector("h3");
 let color1 = document.querySelector(".color1");
 let color2 = document.querySelector(".color2");
 let body = document.getElementById("gradient");
 
-// body.style.background="green";
-//how to set node value
-color1.value="#ff0000";
-color2.value="#ffff00";
+
+//set node value
+// color1.value="#ff0000";
+// color2.value="#ffff00";
 
 function setGradient(){
-	body.style.background=
-		"linear-gradient(to right,"
-		+ color1.value
-		+ ","
-		+ color2.value
-		+ ")";
-		css.textContent=body.style.background + ";"
+  body.style.background=
+  "linear-gradient(to right,"
+  + color1.value
+  + ","
+  + color2.value
+  + ")";
 }
+
+console.log(color1.value, color2.value);
+// color1.value="#ff0000";
+// color2.value="#ffff00";
+// body.style.background.
+css.textContent=body.style.background + ";";
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
