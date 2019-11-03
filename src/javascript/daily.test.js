@@ -1,9 +1,9 @@
 import functions from "./daily.js";
 
 test('prepare for array work', () => {
-	const loopArr = [1,2,3,4,5];
-	expect(functions.prepArrWork(loopArr))
-		.toEqual([1,2,3,4,5]);
+  const testArr = [1,2,3,4,5];
+	expect(functions.prepArrWork(testArr)).toEqual([1,2,3,4,5]);
+	expect(functions.prepArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
 });
 
 test('email builder from an object / map', () => {
@@ -30,7 +30,7 @@ test('email builder from an array', () => {
   .toEqual("bill.smith@evolveu.ca");
 });
     
-test(' assertEquals exercise', () => {
+test('assertEquals exercise', () => {
 	expect(functions.assertEquals("a","b")).toBe(false);
 	expect(functions.assertEquals("a","a")).toBe(true);
 	expect(functions.assertEquals(1,2)).toBe(false);

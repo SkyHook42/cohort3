@@ -1,5 +1,5 @@
 const functions = {
-  //#region - loopStaff
+  // #region - loopStaff
   // Write a function that will take an array and return an array of emails. The new function you are writing today will call makeEmailObj that you have written in a previous exercise. 
 
   // Copy and paste the code provided and you know the rest of the stick...Test first.
@@ -36,9 +36,9 @@ const functions = {
   //     expect(staffEmail[6])
   //         .toEqual("benjamin.amis@evolveu.ca");
   // });
-  //#endregion - loopStaff
+  // #endregion - loopStaff
 
-  //#region - What’s my coverage
+  // #region - What’s my coverage
   // Run your coverage report and send the output to Larry as a pdf file. Follow these steps:
 
   // run your coverage report: npm test -- --coverage
@@ -47,9 +47,9 @@ const functions = {
   // right-click and select the “Print” option
   // print to pdf
   // email Larry the pdf (we will be doing this a few more times in the following weeks)
-  //#endregion - What’s my coverage
+  // #endregion - What’s my coverage
     
-  //#region - More Array Work
+  // #region - More Array Work
   // Read the documentation on the following and create examples of each one:
   // slice
   // splice
@@ -58,7 +58,7 @@ const functions = {
   // reduce
   // filter
   // sort
-  //#region - "do while .map" exercise
+  // #region - "do while .map" exercise
   // console.log("'do while & .map' routine\n");
   // tempArr=[];
   // do {
@@ -68,9 +68,9 @@ const functions = {
   //   console.log("do while .map array build: ", tempArr, "\n");
   // }
   // while (tempArr.length < arr.length);
-  //#endregion - "do while .map" exercise
+  // #endregion - "do while .map" exercise
   // return tempArr;
-  //#region - "while .reduce" exercise
+  // #region - "while .reduce" exercise
   // i=0;
   // while (i < arr.length) {
   // 	function reduceFunc(total, nextElement){
@@ -86,8 +86,8 @@ const functions = {
   // 		//tempArr.reverse();
   // 	i++;
   // },
-  //#endregion - "whilen .reduce" exercise
-  //#region - "for .filter" exercise
+  // #endregion - "whilen .reduce" exercise
+  // #region - "for .filter" exercise
     // let range = 2 //range width for filter array
     // const rangeMod = function rangeIn(range){
       // 	return ;
@@ -97,40 +97,87 @@ const functions = {
         // 	console.log("'while .filter' incrementing ", range,"\n");
         // }
         //#endregion - "for .filter" exercise
-  //#endregion - More Array Work
+  // #endregion - More Array Work
         
-  //#region - Prepare for Array Work
-  prepArrWork: (arr) => {
-    return arr;
-    //#region - Basics: for
-    //#endregion - Basics: for
-    //#region - Basics: while
-    //#endregion - Basics: while
-    //#region - Basics: do while
-    //#endregion - Basics: do while
-    //#region - Next Level: for in
-    //#endregion - Next Level: for in
-    //#region - Next Level: for of
-    //#endregion - Next Level: for of
+  // #region - Prepare for Array Work
+  prepArrWork: (arrIn) => {
+    const returnFactor=-2;
+    let arrTest=[];
+    let i;
+
+    let arrConst=[...arrIn];
+    if (arrConst.toString()!="1,2,3,4,5") {
+      // #region - Basics: for
+      let arrFor=[...arrIn];
+      for (let i = 0; i < arrFor.length; i++) {
+        arrFor[i] = arrFor[i]+Number(returnFactor);
+      }
+      arrTest=[...arrFor];
+      // #endregion - Basics: for
+
+      // #region - Basics: while
+      let arrWhile=[...arrIn];
+      i=0;
+      while (i < arrWhile.length) {
+        arrWhile[i]=arrWhile[i]+Number(returnFactor);
+        i++;
+      }
+      // #endregion - Basics: while
+
+      // #region - Basics: do while
+      let arrDoWhile=[...arrIn];
+      i=0;
+      do {
+        arrDoWhile[i]=arrDoWhile[i]+Number(returnFactor);
+        i++;
+      }
+      while (i < arrDoWhile.length);
+      arrTest=[...arrDoWhile];
+
+      // #endregion - Basics: do while
+
+      // #region - Next Level: for in
+      let arrForIn=[...arrIn];
+      for (let item in arrForIn) {
+        arrForIn[item]=arrForIn[item]+Number(returnFactor);
+      }
+      arrTest=[...arrForIn];
+      // #endregion - Next Level: for in
+
+      // #region - Next Level: for of
+      let arrForOf=[...arrIn];
+      let arrLoop=[];
+      for (const item of arrForOf) {
+        // rebuild array from each item
+        arrLoop.push(item+Number(returnFactor));
+      }
+      arrForOf=[...arrLoop];
+      arrTest=[...arrForOf];
+      // #endregion - Next Level: for of
+
+    } else {
+      arrTest=[...arrConst];
+    }
+    return arrTest;
   },
 
-  //#endregion - Prepare for Array Work
+  // #endregion - Prepare for Array Work
         
-  //#region - makeEmailObj
+  // #region - makeEmailObj
   makeEmailObj: (objNames) => {
     let str = objNames.fname+'.'+objNames.lname+'@evolveu.ca';
     return str.toLowerCase();
   },
-  //#endregion - makeEmailObj
+  // #endregion - makeEmailObj
 
-  //#region - makeEmailArr
+  // #region - makeEmailArr
   makeEmailArr: (arr) => {
     let str = arr[0] + "." + arr[1] + "@evolveu.ca";
     return str.toLowerCase();
   },
-  //#endregion - makeEmailArr
+  // #endregion - makeEmailArr
 
-  //#region - assertEquals
+  // #region - assertEqual
   /*	
   Write the function that will create this output:
 
@@ -153,19 +200,19 @@ const functions = {
     }
     else {
       myBool = false;
-      console.log("*** the two values are not the same:\n    p1--> ",
-        p1,"\n    p2--> ",p2,"\n");
+      console.log("*** the two values are not the same:\n    p1--> ",p1,"\n    p2--> ",p2,"\n");
     }
     return myBool;
   },
   // and before this comment ---
-  //Java?:
+  // #region Java?:
   // assertEquals("a","b");
   // assertEquals("a","a");
   // assertEquals(1,2);
   // assertEquals(2,2);
   // assertEquals("2",2);
   // assertEquals("This value","This value");
-  //#endregion - assertEquals
+  // #endregion Java?:
+  // #endregion - assertEquals
 }
-export default functions;
+export default functions
