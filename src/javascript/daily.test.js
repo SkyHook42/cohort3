@@ -1,4 +1,23 @@
 import functions from "./daily.js";
+// #region More Array Work - October 16-17
+test("slice", () => {
+  expect(functions.methSlice([1,2,3,4],1,3)).toEqual([2,3]);  
+  expect(functions.methSlice([1,2,3,4],0,6)).toEqual([1,2,3,4]);
+  expect(functions.methSlice(["dog","cat","frog","horse","cow"],2,4)).toEqual(["frog","horse"]);
+});
+
+test("splice", () => {
+  expect(functions.methSplice([1,2,3,4],1,2,17)).toEqual([1,17,4]);
+  expect(functions.methSplice([1,2,3,4],2,1,"x")).toEqual([1,2,"x",4]);
+});
+
+test("forEach", () => {
+  expect(functions.methForEach([1,2,3,4])).toEqual([2,3,4,5]);
+  expect(functions.methForEach([7,5,1])).toEqual([8,6,2]);
+  // expect(functions.methSplice([1,2,3,4],2,1,"x")).toEqual([1,2,"x",4]);
+});
+
+// #endregion More Array Work - October 16-17
 
 // #region Prepare for Array Work - October 15, 2019
 test("for loop", () => {

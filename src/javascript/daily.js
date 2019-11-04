@@ -1,4 +1,31 @@
 const functions = {
+  // #region More Array Work - October 16-17
+  methSlice: (arrIn, indStart, indEnd) => {
+    let arrTest = [];
+    arrTest = arrIn.slice(indStart, indEnd);
+    return arrTest;
+  },
+
+  methSplice: (arrIn, indStart, indDel, itemsIn) => {
+    arrIn.splice(indStart, indDel, itemsIn);
+    return arrIn;
+  },
+
+  methForEach: (arrIn) => {
+    let arrOut = [];
+    arrIn.forEach(arrItem => {
+      arrOut.push(arrItem+1);
+    });
+    return arrOut;
+  },
+
+  // map
+  // reduce
+  // filter
+  // sort
+
+  // #endregion More Array Work - October 16-17
+
   // #region Prepare for Array Work - October 15, 2019
   forLoop: (arrIn) => {
     for (let i = 0; i < arrIn.length; i++) {
@@ -31,8 +58,8 @@ const functions = {
   },
 
   forInLoop: (objIn) => {
-    let objStr="";
-    let key=0;
+    let objStr = "";
+    let key = 0;
 
     for (key in objIn) {
       objStr += objIn[key];
@@ -41,12 +68,12 @@ const functions = {
   },
 
   forOfLoop: (itrIn) => {
-    let itrStr="";
-    let i=0;
+    let itrStr = "";
+    let i = 0;
 
-    for (i of itrIn){
-      itrStr+= itrStr[i];
-    return itrStr;
+    for (i of itrIn) {
+      itrStr += itrStr[i];
+      return itrStr;
     }
   },
   // #endregion Prepare for Array Work - October 15, 2019
@@ -128,9 +155,9 @@ export default functions;
   //     prov: "Alberta"
   // };
 
-  /*	
-    Write the function to build email addresses for the company.
-  */
+/*
+  Write the function to build email addresses for the company.
+*/
 
   // test('email builder for company', () => {
   //     const staffEmail = functions.loopStaff(data.staff);
