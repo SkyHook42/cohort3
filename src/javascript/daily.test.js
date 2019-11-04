@@ -1,12 +1,24 @@
 import functions from "./daily.js";
 
-test('prepare for array work', () => {
+test("More Array Work", () => {
+  /*	
+   create example of each array
+  */
+  const testArr = [1,2,3,4,5];
+	expect(functions.moreArrWork(testArr)).toEqual([1,2,3,4,5]);
+  expect(functions.moreArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
+});
+
+test("Prepare for Array Work", () => {
+  /*	
+   create example of each array
+  */
   const testArr = [1,2,3,4,5];
 	expect(functions.prepArrWork(testArr)).toEqual([1,2,3,4,5]);
 	expect(functions.prepArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
 });
 
-test('email builder from an object / map', () => {
+test("makeEmailObj", () => {
   /*	
   Write the function to format an email based on an object / map
   */
@@ -17,7 +29,7 @@ test('email builder from an object / map', () => {
   expect(functions.makeEmailObj({ fname: "Bill", lname: "Smith" })).toEqual("bill.smith@evolveu.ca");
 });
 
-test('email builder from an array', () => {
+test("makeEmailArr", () => {
   /*
   Write a function to format an email based on an array.
   */
@@ -30,7 +42,7 @@ test('email builder from an array', () => {
   .toEqual("bill.smith@evolveu.ca");
 });
     
-test('assertEquals exercise', () => {
+test("AssertEquals", () => {
 	expect(functions.assertEquals("a","b")).toBe(false);
 	expect(functions.assertEquals("a","a")).toBe(true);
 	expect(functions.assertEquals(1,2)).toBe(false);

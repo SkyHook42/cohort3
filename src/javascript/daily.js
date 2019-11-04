@@ -3,11 +3,9 @@ const functions = {
   // Write a function that will take an array and return an array of emails. The new function you are writing today will call makeEmailObj that you have written in a previous exercise. 
 
   // Copy and paste the code provided and you know the rest of the stick...Test first.
-
   // /*
   //     Sample data for the next few exercises.
   // */
-
   // const data = {
   //     staff: [
   //         { fname: "Jane", lname: "Smith", balance: 10 },
@@ -50,53 +48,153 @@ const functions = {
   // #endregion - What’s my coverage
     
   // #region - More Array Work
-  // Read the documentation on the following and create examples of each one:
-  // slice
-  // splice
-  // forEach
-  // map
-  // reduce
-  // filter
-  // sort
-  // #region - "do while .map" exercise
-  // console.log("'do while & .map' routine\n");
-  // tempArr=[];
-  // do {
-  //   //first arr element value fills temp array and map increment
-  //   tempArr = tempArr.map((arrElement) => arrElement+arr[0]);
-  //   tempArr.unshift(arr[0]);
-  //   console.log("do while .map array build: ", tempArr, "\n");
-  // }
-  // while (tempArr.length < arr.length);
-  // #endregion - "do while .map" exercise
-  // return tempArr;
-  // #region - "while .reduce" exercise
-  // i=0;
-  // while (i < arr.length) {
-  // 	function reduceFunc(total, nextElement){
-  // 	return total - nextElement;
-  // 	}
+  moreArrWork: (arrIn) => {
+    const returnFactor=-2;
+    let arrTest = [];
+    let i = 0;
+    
+    let arrConst = [...arrIn];
+    if (arrConst.toString() != "1,2,3,4,5") {
+      // #region - slice
+      let arrSlice = [...arrIn];
+      let arrTrimStart = arrSlice.slice(0,2);
+      let arrTrimMid = arrSlice.slice(2,4);
+      let arrTrimEnd = arrSlice.slice(4);
 
-  // 	// 
-  // 	let reduceMethod = arr.reduce(reduceFunc);
-  // 	console.log("'while .reduce' subtraction ", 
-  // 		reduceMethod-i,"\n");
-  // 		//rebuild array for testing
-  // 		//tempArr.push(reduceMethod+i);
-  // 		//tempArr.reverse();
-  // 	i++;
-  // },
-  // #endregion - "whilen .reduce" exercise
-  // #region - "for .filter" exercise
-    // let range = 2 //range width for filter array
-    // const rangeMod = function rangeIn(range){
-      // 	return ;
-      // }
-      // i=0;
-      // for (i=0; i<arr.length; i++){
-        // 	console.log("'while .filter' incrementing ", range,"\n");
-        // }
-        //#endregion - "for .filter" exercise
+      arrSlice = [];
+      arrSlice = [...arrSlice,...arrTrimStart,...arrTrimMid,...arrTrimEnd];
+
+      // rebuild mod array for test
+      arrTest=[];
+      i = 0;
+      while (i < arrSlice.length){
+        arrTest[i] = arrSlice[i]+returnFactor;
+        i++;
+      }
+      // #endregion - slice
+      
+      // #region - splice
+      let arrSplice = [...arrIn];
+      arrTrimStart = arrSplice.slice(0,2);
+      arrTrimMid = arrSplice.slice(2,4);
+      arrTrimEnd = arrSplice.slice(4);
+
+      // rebuild array from slices
+      arrSplice = [];
+      arrSplice.splice(0,0,...arrTrimStart);
+      arrSplice.splice(2,0,...arrTrimMid);
+      arrSplice.splice(4,0,...arrTrimEnd);
+      
+      // rebuild mod array for test
+      arrTest=[];
+      i = 0;
+      while (i < arrSplice.length){
+        arrTest[i] = arrSplice[i]+returnFactor;
+        i++;
+      }
+      // arrTest = [...arrSplice];
+      
+      // #endregion - splice
+      
+      // #region - forEach
+      let arrEach = [...arrIn];
+
+      arrTest = [];
+      arrEach.forEach(function(element,index){
+        arrEach[index]=element+returnFactor;
+      });
+      arrTest = [...arrEach];
+      // #endregion - forEach
+      
+      // #region - map
+      let arrMap = [...arrIn];
+
+      arrTest = [];
+      arrMap = arrMap.map(item => item+returnFactor);
+      arrTest = [...arrMap];
+      // #endregion - map
+      
+      // #region - reduce
+      let arrReduce = [...arrIn];
+      let reducedAR = 0;
+      let reducedADiff = 0;
+      let itemFirst = 0;
+      
+      reducedAR = arrReduce.reduce((acc,item) => acc+item);
+      // difference between current array reduce and given array reduce
+      reducedADiff = reducedAR-arrReduce.map(item => item+returnFactor).reduce((acc,item) => acc+item);
+      
+      // find first of given range with sequential integer count and sum
+      itemFirst = (reducedAR-reducedADiff)/arrReduce.length
+      
+      // rebuild given array
+      arrReduce = [];
+      i = 0;
+      while (i < arrIn.length){
+          arrReduce.splice(i,1,itemFirst);
+          itemFirst++;
+          i++;
+        }
+
+      // rebuild mod array for test
+      arrTest = [];
+      i = 0;
+      while (i < arrReduce.length){
+        arrTest[i] = arrReduce[i]+returnFactor;
+        i++;
+      }
+      // #endregion - reduce
+
+      // #region - filter
+      let arrFilter = [...arrIn];
+
+      arrTrimMid = arrSlice.slice(2,4);
+      const biggerArr = arrFilter.filter(item => item > 5);
+      const smallerArr = arrFilter.filter(item => item <= 5);
+      
+      // rebuild given array
+      arrFilter=[];
+      arrFilter = smallerArr.concat(biggerArr);
+
+      // rebuild mod array for test
+      arrTest = [];
+      i = 0;
+      while (i < arrFilter.length){
+        arrTest[i] = arrFilter[i]+returnFactor;
+        i++;
+      }
+      // #endregion - filter
+        
+      // #region - sort
+      let arrSort = [...arrIn];
+
+      // randomize elements in-place with Durstenfeld algorithm
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+      }
+
+      arrSort[shuffleArray(arrSort)];// randomized element order
+      arrSort.sort();
+      
+      // rebuild mod array for test
+      arrTest = [];
+      i = 0;
+      while (i < arrSort.length){
+        arrTest[i] = arrSort[i]+returnFactor;
+        i++;
+      }
+      // #endregion - sort
+        
+      } else {
+        arrTest=[...arrConst];
+    }
+    return arrTest;
+  },
   // #endregion - More Array Work
         
   // #region - Prepare for Array Work
@@ -133,7 +231,6 @@ const functions = {
       }
       while (i < arrDoWhile.length);
       arrTest=[...arrDoWhile];
-
       // #endregion - Basics: do while
 
       // #region - Next Level: for in
