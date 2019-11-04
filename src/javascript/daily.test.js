@@ -1,23 +1,37 @@
 import functions from "./daily.js";
 
-test("More Array Work", () => {
-  /*	
-   create example of each array
-  */
-  const testArr = [1,2,3,4,5];
-	expect(functions.moreArrWork(testArr)).toEqual([1,2,3,4,5]);
-  expect(functions.moreArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
+// #region Prepare for Array Work - October 15, 2019
+test("for loop", () => {
+  expect(functions.forLoop([1,2,3,4])).toEqual(10);
+  expect(functions.forLoop([2,3,4])).toEqual(9);
 });
 
-test("Prepare for Array Work", () => {
-  /*	
-   create example of each array
-  */
-  const testArr = [1,2,3,4,5];
-	expect(functions.prepArrWork(testArr)).toEqual([1,2,3,4,5]);
-	expect(functions.prepArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
+test("while loop", () => {
+  expect(functions.whileLoop([1,2,3,4])).toEqual(10);
+  expect(functions.whileLoop([2,3,4])).toEqual(9);
 });
 
+test("do while loop", () => {
+  expect(functions.doWhileLoop([1,2,3,4])).toEqual(10);
+  expect(functions.doWhileLoop([2,3,4])).toEqual(9);
+});
+
+test("for in loop", () => {
+  const testObj = {
+    first:"a",
+    second:"b",
+    third:"c",
+  }
+  expect(functions.forInLoop(testObj)).toEqual("abc");
+});
+
+test("for of loop", () => {
+  expect(functions.forOfLoop(["a","b","c"])).toEqual("abc");
+  expect(functions.forOfLoop(["d","e","f"])).toEqual("def");
+});
+// #endregion Prepare for Array Work - October 15, 2019
+
+// #region makeEmailObj - Oct 11, 2019
 test("makeEmailObj", () => {
   /*	
   Write the function to format an email based on an object / map
@@ -28,7 +42,9 @@ test("makeEmailObj", () => {
   expect(functions.makeEmailObj({ fname: 'First', lname: 'Last' })).toEqual("first.last@evolveu.ca");
   expect(functions.makeEmailObj({ fname: "Bill", lname: "Smith" })).toEqual("bill.smith@evolveu.ca");
 });
+// #endregion makeEmailObj - Oct 11, 2019
 
+// #region makeEmailArr - October 9, 2019
 test("makeEmailArr", () => {
   /*
   Write a function to format an email based on an array.
@@ -41,7 +57,9 @@ test("makeEmailArr", () => {
   expect(functions.makeEmailArr(["Bill", "Smith"]))
   .toEqual("bill.smith@evolveu.ca");
 });
-    
+// #endregion makeEmailArr - October 9, 2019
+
+// #region AssertEquals - October 7, 2019
 test("AssertEquals", () => {
 	expect(functions.assertEquals("a","b")).toBe(false);
 	expect(functions.assertEquals("a","a")).toBe(true);
@@ -50,3 +68,27 @@ test("AssertEquals", () => {
 	expect(functions.assertEquals("2",2)).toBe(false);
 	expect(functions.assertEquals("This value","This value")).toBe(true);
 });
+// #endregion AssertEquals - October 7, 2019
+
+// #region probably trash
+// #region first try - More Array Work
+test("More Array Work", () => {
+  /*	
+   create example of each array
+  */
+  const testArr = [1,2,3,4,5];
+	expect(functions.moreArrWork(testArr)).toEqual([1,2,3,4,5]);
+  expect(functions.moreArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
+});
+// #endregion first try - More Array Work
+
+// #region first try - test("Prepare for Array Work", () => {
+//   /*	
+//    create example of each array
+//   */
+//   const testArr = [1,2,3,4,5];
+// 	expect(functions.prepArrWork(testArr)).toEqual([1,2,3,4,5]);
+// 	expect(functions.prepArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
+// });
+// #endregion first try - test("Prepare for Array Work", () => {
+// #endregion probably trash
