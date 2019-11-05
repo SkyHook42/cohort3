@@ -11,10 +11,10 @@ const functions = {
     return arrIn;
   },
 
-  methForEach: (arrIn) => {
+  methForEach: (arrIn, arrInd) => {
     let arrOut = [];
     arrIn.forEach(arrItem => {
-      arrOut.push(arrItem+1);
+      arrOut.push(arrItem + 1);
     });
     return arrOut;
   },
@@ -28,6 +28,7 @@ const functions = {
 
   // #region Prepare for Array Work - October 15, 2019
   forLoop: (arrIn) => {
+    let acc = 0;
     for (let i = 0; i < arrIn.length; i++) {
       acc += arrIn[i];
     }
@@ -69,13 +70,14 @@ const functions = {
 
   forOfLoop: (itrIn) => {
     let itrStr = "";
-    let i = 0;
+    let element = 0;
 
-    for (i of itrIn) {
-      itrStr += itrStr[i];
-      return itrStr;
+    for (element of itrIn) {
+      itrStr += element;
     }
+    return itrStr;
   },
+
   // #endregion Prepare for Array Work - October 15, 2019
 
   // #region makeEmailObj - Oct 11, 2019

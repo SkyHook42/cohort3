@@ -91,16 +91,15 @@ test("AssertEquals", () => {
 
 // #region probably trash
 // #region first try - More Array Work
-test("More Array Work", () => {
+// test("More Array Work", () => {
   /*	
    create example of each array
   */
-  const testArr = [1,2,3,4,5];
-	expect(functions.moreArrWork(testArr)).toEqual([1,2,3,4,5]);
-  expect(functions.moreArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
-});
+//   const testArr = [1,2,3,4,5];
+// 	expect(functions.moreArrWork(testArr)).toEqual([1,2,3,4,5]);
+//   expect(functions.moreArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
+// });
 // #endregion first try - More Array Work
-
 // #region first try - test("Prepare for Array Work", () => {
 //   /*	
 //    create example of each array
