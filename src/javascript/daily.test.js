@@ -1,4 +1,29 @@
 import functions from "./daily.js";
+
+// #region loopStaff - October 22, 2019
+const data = {
+      staff: [
+          { fname: "Jane", lname: "Smith", balance: 10 },
+          { fname: "Liam", lname: "Henry", balance: 1000 },
+          { fname: "Emma", lname: "Jones", balance: 1330 },
+          { fname: "Olivia", lname: "Notly", balance: 310 },
+          { fname: "Noah", lname: "Ho", balance: 503 },
+          { fname: "William", lname: "Lee", balance: 520 },
+          { fname: "Benjamin", lname: "Amis", balance: 150 },
+      ],
+      company: "EvolveU",
+      city: "Calgary",
+      prov: "Alberta"
+  };
+
+test('email builder for company', () => {
+    const staffEmail = functions.loopStaff(data.staff);
+    // expect(staffEmail[0]).toEqual("jane.smith@evolveu.ca");
+    // expect(staffEmail[3]).toEqual("olivia.notly@evolveu.ca");
+    // expect(staffEmail[6]).toEqual("benjamin.amis@evolveu.ca");
+});
+// #endregion loopStaff - October 22, 2019
+
 // #region More Array Work - October 16-17
 test("slice", () => {
   expect(functions.methSlice([1, 2, 3, 4], 1, 3)).toEqual([2, 3]);
@@ -108,25 +133,3 @@ test("AssertEquals", () => {
   expect(functions.assertEquals("This value", "This value")).toBe(true);
 });
 // #endregion AssertEquals - October 7, 2019
-
-// #region probably trash
-// #region first try - More Array Work
-// test("More Array Work", () => {
-/*
- create example of each array
-*/
-//   const testArr = [1,2,3,4,5];
-// 	expect(functions.moreArrWork(testArr)).toEqual([1,2,3,4,5]);
-//   expect(functions.moreArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
-// });
-// #endregion first try - More Array Work
-// #region first try - test("Prepare for Array Work", () => {
-//   /*	
-//    create example of each array
-//   */
-//   const testArr = [1,2,3,4,5];
-// 	expect(functions.prepArrWork(testArr)).toEqual([1,2,3,4,5]);
-// 	expect(functions.prepArrWork([3,4,5,6,7])).toEqual([1,2,3,4,5]);
-// });
-// #endregion first try - test("Prepare for Array Work", () => {
-// #endregion probably trash
