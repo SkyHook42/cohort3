@@ -16,7 +16,7 @@ rinse and repeat:
 import functions from "./10_25_tdd.js";
 
 test('TDD practice', () => {
-	console.log("10_25_tdd.test says hello");
+	// console.log("10_25_tdd.test says hello");
 	functions.hello();
 	expect(functions.sum(1,2)).toEqual(3);
 	expect(functions.sum(-1,-2)).toEqual(-3);

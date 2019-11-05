@@ -1,11 +1,11 @@
 import functions from "./tdd-01.js"; 
 
 test('hello world console.log1', () => {
-	console.log("Hello World 1");
+	// console.log("Hello World 1");
 });
 
 test('hello world console.log2', () => {
-	console.log("Hello World 2");
+	// console.log("Hello World 2");
 });
 
 test('check a string to see if it is the same', () => {

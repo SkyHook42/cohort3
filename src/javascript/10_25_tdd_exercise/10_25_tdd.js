@@ -1,7 +1,7 @@
 /* testing the plumbing */
 const functions = {
 	hello: ()=>{
-		console.log("10_25_tdd.js says hello");
+		// console.log("10_25_tdd.js says hello");
 	},
 	
 	sum: (a,b)=> {

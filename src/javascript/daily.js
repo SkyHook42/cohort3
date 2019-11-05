@@ -19,10 +19,27 @@ const functions = {
     return arrOut;
   },
 
-  // map
-  // reduce
-  // filter
-  // sort
+  methMap: (arrIn) => {
+    let arrOut = [];
+    arrOut = arrIn.map(arrItem => arrItem + 1);
+    return arrOut;
+  },
+
+  methReduce: (arrIn) => {
+    function funcRedAdd(accRedAdd, itemArrIn) {
+      return accRedAdd + itemArrIn;
+    }
+    return arrIn.reduce(funcRedAdd);
+  },
+
+  methFilter: (arrIn) => {
+    return arrIn.filter(item => item >= 3);
+  },
+
+  methSort: (arrIn) => {
+    // sorts by UTF-16 string values
+    return arrIn.sort();
+  },
 
   // #endregion More Array Work - October 16-17
 
@@ -97,7 +114,7 @@ const functions = {
   // #region AssertEquals - October 7, 2019
   /*	
   Write the function that will create this output:
-
+ 
   *** the two values are not the same:
   p1--> a
   p2--> b
@@ -182,6 +199,5 @@ export default functions;
   // print to pdf
   // email Larry the pdf (we will be doing this a few more times in the following weeks)
   // #endregion - What’s my coverage
-  // #region More Array Work - October 16-17
-  // #endregion More Array Work - October 16-17
+
 // #endregion probably trash

@@ -1,7 +1,7 @@
 // /* testing the plumbing */
 import functions from "./functions.js";
 
-console.log("index.js says hello");
+// console.log("index.js says hello");
 functions.hello();
 
 buttdDoIt.addEventListener("click", () => {
