@@ -1,4 +1,29 @@
 import functions from "./daily.js";
+
+// #region loopStaff each / map - October 25, 2019
+test('loopStaff forEach', () => {
+  const staffEmail = functions.loopStaffForEach(data.staff);
+  let i = 0;
+
+  while (i < staffEmail.length) {
+    expect(staffEmail[i]).toEqual((data.staff[i].fname + "." + data.staff[i].lname + "@evolveu.ca").toLowerCase());
+    i++;
+  };
+  expect(staffEmail[staffEmail.length - 1]).toEqual("benjamin.amis@evolveu.ca");
+});
+
+test('loopStaff map', () => {
+  const staffEmail = functions.loopStaffMap(data.staff);
+  let i = 0;
+
+  while (i < staffEmail.length) {
+    expect(staffEmail[i]).toEqual((data.staff[i].fname + "." + data.staff[i].lname + "@evolveu.ca").toLowerCase());
+    i++;
+  };
+  expect(staffEmail[staffEmail.length - 1]).toEqual("benjamin.amis@evolveu.ca");
+});
+// #endregion loopStaff each / map - October 25, 2019
+
 // #region loopStaff: in / of - October 24, 2019
 test('loopStaff forin', () => {
   const staffEmail = functions.loopStaffIn(data.staff);
@@ -12,11 +37,12 @@ test('loopStaff forof', () => {
   // Notice how you are beginning to repeat your tests. What can you do about it?
   const staffEmail = functions.loopStaffOf(data.staff);
   let i = 0;
+
   while (i < staffEmail.length) {
     expect(staffEmail[i]).toEqual((data.staff[i].fname + "." + data.staff[i].lname + "@evolveu.ca").toLowerCase());
     i++;
   };
-  expect(staffEmail[staffEmail.length-1]).toEqual("benjamin.amis@evolveu.ca");
+  expect(staffEmail[staffEmail.length - 1]).toEqual("benjamin.amis@evolveu.ca");
 });
 // #endregion loopStaff: in / of - October 24, 2019
 

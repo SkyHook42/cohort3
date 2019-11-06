@@ -1,6 +1,21 @@
 const functions = {
+  // #region loopStaff each / map - October 25, 2019
+  loopStaffForEach: (arrIn) => {
+    let arrOut = [];
+    arrIn.forEach(item => {
+      arrOut.push(functions.makeEmailObj(item));
+    });
+    return arrOut;
+  },
+
+  loopStaffMap: (arrIn) => {
+    let arrOut = [];
+    arrOut = arrIn.map(functions.makeEmailObj);
+    return arrOut;
+  },
+  // #endregion loopStaff each / map - October 25, 2019
+
   // #region loopStaff: in / of - October 24, 2019
-  // Do the same assignment as the last one using the two forms of the “for” statement. Create your own tests but use the function names that are provided below.
   loopStaffIn: (arrIn) => {
     let arrOut = [];
     let index;
