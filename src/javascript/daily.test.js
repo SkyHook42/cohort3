@@ -1,27 +1,47 @@
 import functions from "./daily.js";
+// #region loopStaff: in / of - October 24, 2019
+test('loopStaff forin', () => {
+  const staffEmail = functions.loopStaffIn(data.staff);
+  expect(staffEmail[0]).toEqual("jane.smith@evolveu.ca");
+  expect(staffEmail[3]).toEqual("olivia.notly@evolveu.ca");
+  expect(staffEmail[6]).toEqual("benjamin.amis@evolveu.ca");
+  expect(staffEmail[staffEmail.length - 1]).toEqual("benjamin.amis@evolveu.ca");
+});
+
+test('loopStaff forof', () => {
+  // Notice how you are beginning to repeat your tests. What can you do about it?
+  const staffEmail = functions.loopStaffOf(data.staff);
+  let i = 0;
+  while (i < staffEmail.length) {
+    expect(staffEmail[i]).toEqual((data.staff[i].fname + "." + data.staff[i].lname + "@evolveu.ca").toLowerCase());
+    i++;
+  };
+  expect(staffEmail[staffEmail.length-1]).toEqual("benjamin.amis@evolveu.ca");
+});
+// #endregion loopStaff: in / of - October 24, 2019
 
 // #region loopStaff - October 22, 2019
 const data = {
-      staff: [
-          { fname: "Jane", lname: "Smith", balance: 10 },
-          { fname: "Liam", lname: "Henry", balance: 1000 },
-          { fname: "Emma", lname: "Jones", balance: 1330 },
-          { fname: "Olivia", lname: "Notly", balance: 310 },
-          { fname: "Noah", lname: "Ho", balance: 503 },
-          { fname: "William", lname: "Lee", balance: 520 },
-          { fname: "Benjamin", lname: "Amis", balance: 150 },
-      ],
-      company: "EvolveU",
-      city: "Calgary",
-      prov: "Alberta"
-  };
+  staff: [
+    { fname: "Jane", lname: "Smith", balance: 10 },
+    { fname: "Liam", lname: "Henry", balance: 1000 },
+    { fname: "Emma", lname: "Jones", balance: 1330 },
+    { fname: "Olivia", lname: "Notly", balance: 310 },
+    { fname: "Noah", lname: "Ho", balance: 503 },
+    { fname: "William", lname: "Lee", balance: 520 },
+    { fname: "Benjamin", lname: "Amis", balance: 150 },
+  ],
+  company: "EvolveU",
+  city: "Calgary",
+  prov: "Alberta"
+};
 
 test('email builder for company', () => {
-    const staffEmail = functions.loopStaff(data.staff);
-    expect(staffEmail[0]).toEqual("jane.smith@evolveu.ca");
-    expect(staffEmail[3]).toEqual("olivia.notly@evolveu.ca");
-    expect(staffEmail[6]).toEqual("benjamin.amis@evolveu.ca");
-    expect(staffEmail.length).toEqual(data.staff.length);
+  const staffEmail = functions.loopStaff(data.staff);
+  expect(staffEmail[0]).toEqual("jane.smith@evolveu.ca");
+  expect(staffEmail[3]).toEqual("olivia.notly@evolveu.ca");
+  expect(staffEmail[6]).toEqual("benjamin.amis@evolveu.ca");
+  expect(staffEmail[staffEmail.length - 1]).toEqual("benjamin.amis@evolveu.ca");
 });
 // #endregion loopStaff - October 22, 2019
 
@@ -59,8 +79,8 @@ test("filter", () => {
 });
 
 test("sort", () => {
-  expect(functions.methSort([7,6,5,4,3])).toEqual([3,4,5,6,7]);
-  expect(functions.methSort([17, -18, "bogman", -199])).toEqual([ -18, -199, 17, "bogman" ]);
+  expect(functions.methSort([7, 6, 5, 4, 3])).toEqual([3, 4, 5, 6, 7]);
+  expect(functions.methSort([17, -18, "bogman", -199])).toEqual([-18, -199, 17, "bogman"]);
 });
 
 // #endregion More Array Work - October 16-17

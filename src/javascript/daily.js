@@ -1,5 +1,28 @@
 const functions = {
-  // #region loopStaff
+  // #region loopStaff: in / of - October 24, 2019
+  // Do the same assignment as the last one using the two forms of the “for” statement. Create your own tests but use the function names that are provided below.
+  loopStaffIn: (arrIn) => {
+    let arrOut = [];
+    let index;
+
+    for (index in arrIn) { //
+      arrOut[index] = functions.makeEmailObj(arrIn[index]);
+    }
+    return arrOut;
+
+  },
+
+  loopStaffOf: (arrIn) => {
+    let arrOut = [];
+    for (const element of arrIn) {
+      arrOut.push(functions.makeEmailObj(element));
+    }
+    return arrOut;
+  },
+
+  // #endregion loopStaff: in / of - October 24, 2019
+
+  // #region loopStaff - October 22, 2019
   loopStaff: (arrIn) => {
     let arrOut = [];
     let i = 0;
@@ -9,7 +32,7 @@ const functions = {
     }
     return arrOut;
   },
-  // #endregion - loopStaff
+  // #endregion loopStaff - October 22, 2019
 
   // #region More Array Work - October 16-17
   methSlice: (arrIn, indStart, indEnd) => {
