@@ -18,9 +18,10 @@ const data = {
 
 test('email builder for company', () => {
     const staffEmail = functions.loopStaff(data.staff);
-    // expect(staffEmail[0]).toEqual("jane.smith@evolveu.ca");
-    // expect(staffEmail[3]).toEqual("olivia.notly@evolveu.ca");
-    // expect(staffEmail[6]).toEqual("benjamin.amis@evolveu.ca");
+    expect(staffEmail[0]).toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3]).toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6]).toEqual("benjamin.amis@evolveu.ca");
+    expect(staffEmail.length).toEqual(data.staff.length);
 });
 // #endregion loopStaff - October 22, 2019
 

@@ -1,8 +1,12 @@
 const functions = {
   // #region loopStaff
-  // Write a function that will take an array and return an array of emails. The new function you are writing today will call makeEmailObj that you have written in a previous exercise. 
   loopStaff: (arrIn) => {
     let arrOut = [];
+    let i = 0;
+    while (i < arrIn.length) {
+      arrOut[i] = functions.makeEmailObj(arrIn[i]);
+      i++;
+    }
     return arrOut;
   },
   // #endregion - loopStaff
@@ -107,6 +111,7 @@ const functions = {
 
   // #region makeEmailObj - Oct 11, 2019
   makeEmailObj: (objNames) => {
+    // input fname,lname; output evolveu email address string
     let str = objNames.fname + '.' + objNames.lname + '@evolveu.ca';
     return str.toLowerCase();
   },
