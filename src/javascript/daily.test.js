@@ -1,4 +1,26 @@
 import functions from "./daily.js";
+// #region More Array Exercises - October 29, 2019
+test('More Array balanceTotal', () => {
+  const resultOut = functions.balanceTotal([data.staff[0]]);
+  expect(resultOut).toEqual(10);
+  // const resultOut2 = functions.balanceTotal(data.staff);
+  // expect(resultOut2).toEqual(3823);
+});
+
+// test('More Array balanceAvg', () => {
+//   const resultOut = functions.balanceAvg([data.staff[0]]);
+//   expect(resultOut).toEqual(10);
+//   const resultOut2 = functions.balanceAvg(data.staff);
+//   expect(resultOut2).toEqual(Number((3823/data.staff.length).toFixed(2)));
+// });
+
+// test('More Array balanceEvery', () => {
+  // const resultOut = functions.balanceEvery([data.staff[0]];
+  // expect(resultOut).toEqual(true);
+  // const resultOut2 = functions.balanceAvg(data.staff);
+  // expect(resultOut2).toEqual(Number((3823/data.staff.length).toFixed(2)));
+// });
+// #endregion More Array Exercises - October 29, 2019
 
 // #region loopStaff each / map - October 25, 2019
 test('loopStaff forEach', () => {
@@ -46,7 +68,7 @@ test('loopStaff forof', () => {
 });
 // #endregion loopStaff: in / of - October 24, 2019
 
-// #region loopStaff - October 22, 2019
+// #region loopStaff - October 22, 2019 - data object location
 const data = {
   staff: [
     { fname: "Jane", lname: "Smith", balance: 10 },

@@ -1,4 +1,40 @@
 const functions = {
+  // #region More Array Exercises - October 29, 2019
+  // Use only the JavaScript built-in functions listed below to complete this exercise. Make sure you write your tests first.
+
+  balanceTotal: (arrIn) => {
+    let arrTotal = 0;
+    const summate = (acc, item) => acc + item.balance;
+    arrTotal = arrIn.reduce(summate, 0);
+    return arrTotal;
+  },
+
+  balanceAvg: (arrIn) => {
+    return Number((functions.balanceTotal(arrIn) / arrIn.length).toFixed(2));
+  },
+
+  // #region links
+  // Understand the documentation. Now that we have a few arrays, let’s practice using the following:
+
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+  balanceEvery: (arrIn, test) => {
+    let arrBool = false;
+    console.log(arrIn.balance, test);
+    const testOut = (item) => item.balance + test;
+    arrBool = arrIn.every(testOut);
+    console.log("logging",arrBool);
+    return arrBool;
+  },
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex
+  // #endregion links
+  // #endregion More Array Exercises - October 29, 2019
+
   // #region loopStaff each / map - October 25, 2019
   loopStaffForEach: (arrIn) => {
     let arrOut = [];
