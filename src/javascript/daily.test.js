@@ -3,16 +3,27 @@ import functions from "./daily.js";
 test('More Array balanceTotal', () => {
   const resultOut = functions.balanceTotal([data.staff[0]]);
   expect(resultOut).toEqual(10);
-  // const resultOut2 = functions.balanceTotal(data.staff);
-  // expect(resultOut2).toEqual(3823);
+  const resultOut2 = functions.balanceTotal(data.staff);
+  expect(resultOut2).toEqual(3823);
 });
 
-// test('More Array balanceAvg', () => {
-//   const resultOut = functions.balanceAvg([data.staff[0]]);
-//   expect(resultOut).toEqual(10);
-//   const resultOut2 = functions.balanceAvg(data.staff);
-//   expect(resultOut2).toEqual(Number((3823/data.staff.length).toFixed(2)));
-// });
+test('More Array balanceAvg', () => {
+  const resultOut = functions.balanceAvg([data.staff[0]]);
+  expect(resultOut).toEqual(10);
+  const resultOut2 = functions.balanceAvg(data.staff);
+  expect(resultOut2).toEqual(Number((3823/data.staff.length).toFixed(2)));
+});
+
+const myTestData = {
+  staff: [
+    { fname: "Tom", lname: "Smith", balance: 10 },
+    { fname: "Dick", lname: "Jones", balance: 500 },
+    { fname: "Harry", lname: "Palmer", balance: 27000 },
+  ],
+  company: "Dogless",
+  city: "Springfield",
+  prov: "Nunavut",
+};
 
 // test('More Array balanceEvery', () => {
   // const resultOut = functions.balanceEvery([data.staff[0]];
