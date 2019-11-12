@@ -33,7 +33,6 @@ test('More Array balanceFindIndex', () => {
   const testDat = functions.balanceFindIndex(data.staff);
   expect(testDat).toEqual(4);
 });
-
 // #endregion More Array Exercises - October 29, 2019
 
 // #region loopStaff each / map - October 25, 2019
