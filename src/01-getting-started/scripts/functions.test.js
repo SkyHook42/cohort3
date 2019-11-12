@@ -13,9 +13,6 @@ import functions from './functions'
 //   while (i < 4);
 // });
 
-
-
-
 // // console.log("i = ",i,income[i],tax[i]);
 // // expect(functions.cdnTaxes(income[1])).toEqual(tax[1]);
 // // expect(functions.cdnTaxes(income[2])).toEqual(tax[2]);

@@ -1,0 +1,20 @@
+#leftSide {
+  border: dashed;
+  width: 45%;
+  height: 500px;
+  float: left;
+}
+
+#rightSide {
+  border: dashed;
+  width: 45%;
+  height: 500px;
+  float: right;
+
+}
+
+.sally {
+  border:dashed;
+  padding: 5px;
+  margin: 10px;
+}
