@@ -1,7 +1,9 @@
 const functions = {
-  // #region More Array Exercises - October 29, 2019
-  // Use only the JavaScript built-in functions listed below to complete this exercise. Make sure you write your tests first.
+  // #region More Array Exercises (Really) - November 6, 2019
+  // Using one of the callback functions we researched in the last exercise (but may have not used previously) create a new array for balances >= 1000 from the staff data. 
+  // #endregion More Array Exercises (Really) - November 6, 2019
 
+  // #region More Array Exercises - October 29, 2019
   balanceTotal: (arrIn) => {
     let arrTotal = 0;
     const summate = (acc, item) => acc + item.balance;
@@ -14,8 +16,6 @@ const functions = {
   },
 
   // #region links
-  // Understand the documentation. Now that we have a few arrays, let’s practice using the following:
-
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
@@ -34,12 +34,14 @@ const functions = {
     arrBool = arrIn.some(item => item.balance > 999);
     return arrBool;
   },
+
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
   balanceFind: (arrIn) => {
     let arrFound = 0;
     arrFound = arrIn.find(item => item.balance > 999).balance;
     return arrFound;
   },
+
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex
   balanceFindIndex: (arrIn) => {
     let arrInd = 0;
@@ -47,7 +49,6 @@ const functions = {
     return arrInd;
   },
   // #endregion links
-
   // #endregion More Array Exercises - October 29, 2019
 
   // #region loopStaff each / map - October 25, 2019

@@ -5,7 +5,7 @@ test('How do pointers work', () => {
   const arr = [];
   const obj = {};
   arr.push(a);
-  obj[a.name] = a;
+  obj[a.name] = a;//why brackets?
   // console.log(a);
   // console.log(obj[a.name]);
 
