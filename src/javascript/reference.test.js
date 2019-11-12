@@ -5,14 +5,12 @@ test('How do pointers work', () => {
   const arr = [];
   const obj = {};
   arr.push(a);
-  obj[a.name] = a;//why brackets?
-  // console.log(a);
-  // console.log(obj[a.name]);
+  obj[a.name] = a;
 
   expect(a.bal).toBe(10);
   expect(arr[0].bal).toBe(10);
   expect(obj[a.name].bal).toBe(10);
-  expect(obj.Larry.bal).toBe(10);//where did this come from?
+  expect(obj.Larry.bal).toBe(10);
 
   a.bal += 1;
   expect(a.bal).toBe(11);
