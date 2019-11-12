@@ -1,38 +1,5 @@
 import functions from "./daily.js";
 // #region More Array Exercises (Really) - November 6, 2019
-test('More Array balanceTotal', () => {
-  const resultOut = functions.balanceTotal([data.staff[0]]);
-  expect(resultOut).toEqual(10);
-  const resultOut2 = functions.balanceTotal(data.staff);
-  expect(resultOut2).toEqual(3823);
-});
-
-test('More Array balanceAvg', () => {
-  const resultOut = functions.balanceAvg([data.staff[0]]);
-  expect(resultOut).toEqual(10);
-  const resultOut2 = functions.balanceAvg(data.staff);
-  expect(resultOut2).toEqual(Number((3823 / data.staff.length).toFixed(2)));
-});
-
-test('More Array balanceEvery', () => {
-  const testDat = functions.balanceEvery(data.staff);
-  expect(testDat).toEqual(true);
-});
-
-test('More Array balanceSome', () => {
-  const testDat = functions.balanceSome(data.staff);
-  expect(testDat).toEqual(true);
-});
-
-test('More Array balanceFind', () => {
-  const testDat = functions.balanceFind(data.staff);
-  expect(testDat).toEqual(1000);
-});
-
-test('More Array balanceFindIndex', () => {
-  const testDat = functions.balanceFindIndex(data.staff);
-  expect(testDat).toEqual(4);
-});
 // #endregion More Array Exercises (Really) - November 6, 2019
 
 // #region More Array Exercises - October 29, 2019
