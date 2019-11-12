@@ -11,26 +11,29 @@ test('More Array balanceAvg', () => {
   const resultOut = functions.balanceAvg([data.staff[0]]);
   expect(resultOut).toEqual(10);
   const resultOut2 = functions.balanceAvg(data.staff);
-  expect(resultOut2).toEqual(Number((3823/data.staff.length).toFixed(2)));
+  expect(resultOut2).toEqual(Number((3823 / data.staff.length).toFixed(2)));
 });
 
-const myTestData = {
-  staff: [
-    { fname: "Tom", lname: "Smith", balance: 10 },
-    { fname: "Dick", lname: "Jones", balance: 500 },
-    { fname: "Harry", lname: "Palmer", balance: 27000 },
-  ],
-  company: "Dogless",
-  city: "Springfield",
-  prov: "Nunavut",
-};
+test('More Array balanceEvery', () => {
+  const testDat = functions.balanceEvery(data.staff);
+  expect(testDat).toEqual(true);
+});
 
-// test('More Array balanceEvery', () => {
-  // const resultOut = functions.balanceEvery([data.staff[0]];
-  // expect(resultOut).toEqual(true);
-  // const resultOut2 = functions.balanceAvg(data.staff);
-  // expect(resultOut2).toEqual(Number((3823/data.staff.length).toFixed(2)));
-// });
+test('More Array balanceSome', () => {
+  const testDat = functions.balanceSome(data.staff);
+  expect(testDat).toEqual(true);
+});
+
+test('More Array balanceFind', () => {
+  const testDat = functions.balanceFind(data.staff);
+  expect(testDat).toEqual(1000);
+});
+
+test('More Array balanceFindIndex', () => {
+  const testDat = functions.balanceFindIndex(data.staff);
+  expect(testDat).toEqual(4);
+});
+
 // #endregion More Array Exercises - October 29, 2019
 
 // #region loopStaff each / map - October 25, 2019
@@ -79,21 +82,7 @@ test('loopStaff forof', () => {
 });
 // #endregion loopStaff: in / of - October 24, 2019
 
-// #region loopStaff - October 22, 2019 - data object location
-const data = {
-  staff: [
-    { fname: "Jane", lname: "Smith", balance: 10 },
-    { fname: "Liam", lname: "Henry", balance: 1000 },
-    { fname: "Emma", lname: "Jones", balance: 1330 },
-    { fname: "Olivia", lname: "Notly", balance: 310 },
-    { fname: "Noah", lname: "Ho", balance: 503 },
-    { fname: "William", lname: "Lee", balance: 520 },
-    { fname: "Benjamin", lname: "Amis", balance: 150 },
-  ],
-  company: "EvolveU",
-  city: "Calgary",
-  prov: "Alberta"
-};
+// #region loopStaff - October 22, 2019
 
 test('email builder for company', () => {
   const staffEmail = functions.loopStaff(data.staff);
@@ -213,3 +202,29 @@ test("AssertEquals", () => {
   expect(functions.assertEquals("This value", "This value")).toBe(true);
 });
 // #endregion AssertEquals - October 7, 2019
+
+const data = {
+  staff: [
+    { fname: "Jane", lname: "Smith", balance: 10 },
+    { fname: "Liam", lname: "Henry", balance: 1000 },
+    { fname: "Emma", lname: "Jones", balance: 1330 },
+    { fname: "Olivia", lname: "Notly", balance: 310 },
+    { fname: "Noah", lname: "Ho", balance: 503 },
+    { fname: "William", lname: "Lee", balance: 520 },
+    { fname: "Benjamin", lname: "Amis", balance: 150 },
+  ],
+  company: "EvolveU",
+  city: "Calgary",
+  prov: "Alberta"
+};
+
+const myTestData = {
+  staff: [
+    { fname: "Tom", lname: "Smith", balance: 10 },
+    { fname: "Dick", lname: "Jones", balance: 500 },
+    { fname: "Harry", lname: "Palmer", balance: 27000 },
+  ],
+  company: "Dogless",
+  city: "Springfield",
+  prov: "Nunavut",
+};

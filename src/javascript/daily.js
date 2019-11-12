@@ -20,19 +20,34 @@ const functions = {
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
-  balanceEvery: (arrIn, test) => {
+  balanceEvery: (arrIn) => {
     let arrBool = false;
-    console.log(arrIn.balance, test);
-    const testOut = (item) => item.balance + test;
-    arrBool = arrIn.every(testOut);
-    console.log("logging",arrBool);
+    arrBool = arrIn.every(item => item.balance > 0);
     return arrBool;
   },
+
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+  balanceSome: (arrIn) => {
+    let arrBool = false;
+    arrBool = arrIn.some(item => item.balance > 999);
+    return arrBool;
+  },
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+  balanceFind: (arrIn) => {
+    let arrFound = 0;
+    arrFound = arrIn.find(item => item.balance > 999).balance;
+    return arrFound;
+  },
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex
+  balanceFindIndex: (arrIn) => {
+    let arrInd = 0;
+    arrInd = arrIn.findIndex(item => item.balance == 503);
+    return arrInd;
+  },
   // #endregion links
+
   // #endregion More Array Exercises - October 29, 2019
 
   // #region loopStaff each / map - October 25, 2019
