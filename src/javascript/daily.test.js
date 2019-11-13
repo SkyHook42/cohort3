@@ -1,19 +1,15 @@
 import functions from "./daily.js";
-import { isTSArrayType } from "@babel/types";
 
 // #region Callback Exercise (Part 1) - November 8, 2019
 test("Callback Exercise (Part 1)", () => {
-  // let i=0;
-  // while (functions.findBCAB(people[i].province !== ("AB" || "BC"))){
-  //   i++;
-  // }
-
   expect(functions.findBCAB(people)[0].province).toEqual("BC");
   expect(functions.findBCAB(people)[1].province).toEqual("AB");
+  expect(functions.findBCAB(people).length != people.length).toEqual(true);
   expect(functions.nameBCAB(people)[0]).toEqual("Alex Smith");
   expect(functions.nameBCAB(people)[1]).toEqual("Angela Jones");
-  expect(functions.callbackDaily(people)).toEqual();
-  // console.log(functions.findBCAB(people)[0].province);
+  expect(functions.nameBCAB(people).length == people.length).toEqual(true);
+  expect(functions.nameBCAB(people).length == functions.findBCAB(people).length).toEqual(false);
+  expect(functions.callbackDaily(people).length != people.length).toEqual(true);
 });
 // #endregion Callback Exercise (Part 1) - November 8, 2019
 

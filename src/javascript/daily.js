@@ -1,17 +1,15 @@
 const functions = {
   // #region Callback Exercise (Part 1) - November 8, 2019
-  // How will we test this?
   findBCAB: (arrIn) => {
     return arrIn.filter(item => item.province === "BC" || item.province === "AB");
   },
-  // How will we test this?
+  
   nameBCAB: (arrIn) => {
     let arrOut = [];
     arrOut = arrIn.map(item => item.fname + " " + item.lname)
     return arrOut;
   },
 
-  // How will we test this?
   callbackDaily: (arrIn) => {
     return functions.nameBCAB(functions.findBCAB(arrIn));
   },
