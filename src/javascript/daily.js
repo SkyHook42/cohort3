@@ -1,4 +1,22 @@
 const functions = {
+  // #region Callback Exercise (Part 1) - November 8, 2019
+  // How will we test this?
+  findBCAB: (arrIn) => {
+    return arrIn.filter(item => item.province === "BC" || item.province === "AB");
+  },
+  // How will we test this?
+  nameBCAB: (arrIn) => {
+    let arrOut = [];
+    arrOut = arrIn.map(item => item.fname + " " + item.lname)
+    return arrOut;
+  },
+
+  // How will we test this?
+  callbackDaily: (arrIn) => {
+    return functions.nameBCAB(functions.findBCAB(arrIn));
+  },
+  // #endregion Callback Exercise (Part 1) - November 8, 2019
+
   // #region More Array Exercises (Really) - November 6, 2019
   // Using one of the callback functions we researched in the last exercise (but may have not used previously) create a new array for balances >= 1000 from the staff data. 
   balanceFilter: (arrIn) => {
