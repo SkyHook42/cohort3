@@ -1,6 +1,12 @@
 import functions from "./daily.js";
 // #region More Array Exercises (Really) - November 6, 2019
-
+test('Really balanceFilter', () => {
+  expect(functions.balanceFilterReduce(data.staff)).toEqual(2330);
+  expect(functions.balanceFilterEvery(data.staff)).toEqual(true);
+  expect(functions.balanceFilterSome(data.staff)).toEqual(true);
+  expect(functions.balanceFilterFind(data.staff)).toEqual(1330);
+  expect(functions.balanceFilterFindIndex(data.staff)).toEqual(0);
+});
 // #endregion More Array Exercises (Really) - November 6, 2019
 
 // #region More Array Exercises - October 29, 2019

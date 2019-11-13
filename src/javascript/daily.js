@@ -1,6 +1,39 @@
 const functions = {
   // #region More Array Exercises (Really) - November 6, 2019
   // Using one of the callback functions we researched in the last exercise (but may have not used previously) create a new array for balances >= 1000 from the staff data. 
+  balanceFilter: (arrIn) => {
+    let arrFilter = [];
+    arrFilter = arrIn.filter(item => item.balance >= 1000);
+    return arrFilter;
+  },
+
+  balanceFilterReduce: (arrIn) => {
+    return functions.balanceFilter(arrIn).reduce((acc, item) => acc + item.balance, 0);
+  },
+
+  balanceFilterEvery: (arrIn) => {
+    let arrBool = false;
+    arrBool = functions.balanceFilter(arrIn).every(item => item.balance >= 1000);
+    return arrBool;
+  },
+
+  balanceFilterSome: (arrIn) => {
+    let arrBool = false;
+    arrBool = functions.balanceFilter(arrIn).some(item => item.balance > 1001);
+    return arrBool;
+  },
+
+  balanceFilterFind: (arrIn) => {
+    let arrFound = 0;
+    arrFound = functions.balanceFilter(arrIn).find(item => item.balance > 1001).balance;
+    return arrFound;
+  },
+
+  balanceFilterFindIndex: (arrIn) => {
+    let arrInd = 0;
+    arrInd = functions.balanceFilter(arrIn).findIndex(item => item.balance >= 1000);
+    return arrInd;
+  },
   // #endregion More Array Exercises (Really) - November 6, 2019
 
   // #region More Array Exercises - October 29, 2019
