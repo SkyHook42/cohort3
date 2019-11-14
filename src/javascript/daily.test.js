@@ -10,6 +10,7 @@ test("Callback Exercise (Part 1)", () => {
   expect(functions.nameBCAB(people).length == people.length).toEqual(true);
   expect(functions.nameBCAB(people).length == functions.findBCAB(people).length).toEqual(false);
   expect(functions.callbackDaily(people).length != people.length).toEqual(true);
+  expect(functions.callbackDaily2(people,functions.findBCAB,functions.nameBCAB).length != people.length).toEqual(true);
 });
 // #endregion Callback Exercise (Part 1) - November 8, 2019
 

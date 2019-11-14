@@ -3,7 +3,7 @@ const functions = {
   findBCAB: (arrIn) => {
     return arrIn.filter(item => item.province === "BC" || item.province === "AB");
   },
-  
+
   nameBCAB: (arrIn) => {
     let arrOut = [];
     arrOut = arrIn.map(item => item.fname + " " + item.lname)
@@ -12,6 +12,10 @@ const functions = {
 
   callbackDaily: (arrIn) => {
     return functions.nameBCAB(functions.findBCAB(arrIn));
+  },
+
+  callbackDaily2: (arrIn, funcIn1, funcIn2) => {
+    return funcIn2(funcIn1(arrIn));
   },
   // #endregion Callback Exercise (Part 1) - November 8, 2019
 

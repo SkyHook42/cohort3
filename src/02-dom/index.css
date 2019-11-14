@@ -1,16 +1,15 @@
 #leftSide {
   border: dashed;
   width: 45%;
-  height: 500px;
+  min-height: 200px;
   float: left;
 }
 
 #rightSide {
   border: dashed;
   width: 45%;
-  height: 500px;
+  min-height: 200px;
   float: right;
-
 }
 
 .sally {
