@@ -6,5 +6,5 @@ subCard.addEventListener("click", () => {
 })
 
 window.leftSide.addEventListener('click', (e) => {
-  btnRunner(e);
+  functions.btnRunner(e);
 })

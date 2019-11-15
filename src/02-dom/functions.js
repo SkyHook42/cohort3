@@ -16,10 +16,10 @@ const functions = {
     return newCard;
   },
 
-  btnRunner: (event) => {
-    let btnParent = event.target.parentNode;
+  btnRunner: (e) => {
+    let btnParent = e.target.parentNode;
     let newCardPlace = functions.addCard;
-    switch (event.target.id) {
+    switch (e.target.id) {
       case "idBefore":
         leftSide.insertBefore(newCardPlace(), btnParent);
         break;
