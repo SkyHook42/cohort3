@@ -4,17 +4,16 @@ const functions = {
   },
 
   counter: 0,
-
   addCard: () => {
     functions.counter++;
-    const newDiv = document.createElement("div");
-    newDiv.className="sally";
-    newDiv.id=functions.counter;
-    newDiv.innerHTML=`Card Number ${functions.counter}
-    <button id="idBefore">Add Before</button>
-    <button id="idAfter">Add After</button>
-    <button id="idDelete">Delete</button>`;
-    return newDiv;
+    const newCard = document.createElement("div");
+    newCard.className="card";
+    newCard.id=functions.counter;
+    newCard.innerHTML=`Card Number ${functions.counter}
+    <br><button id="idBefore" class="btnL">Add Card Before</button>
+    <br><button id="idAfter" class="btnL">Add Card After</button>
+    <button id="idDelete"class="btnR">Delete Card</button>`;
+    return newCard;
   },
   delCard:(idIn)=>{
     // idIn.removeParent

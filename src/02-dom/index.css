@@ -1,19 +1,39 @@
 #leftSide {
-  border: dashed;
-  width: 45%;
-  min-height: 200px;
+  border: solid;
+  width: 49%;
+  min-height: 75px;
   float: left;
 }
 
 #rightSide {
-  border: dashed;
-  width: 45%;
-  min-height: 200px;
+  border: solid;
+  width: 49%;
+  min-height: 75px;
   float: right;
 }
 
-.sally {
-  border:dashed;
-  padding: 5px;
-  margin: 10px;
+.card {
+  border:solid;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 4px;
 }
+
+.btnL {
+  padding: 1%;
+  margin: 1%;
+  background-color: #30C841;
+  border-radius: 4px;
+  color: white;
+  width: 30%;
+}
+
+.btnR {
+  float: right;
+  padding: 1%;
+  margin: 1%;
+  background-color: #FF0000;
+  border-radius: 4px;
+  color: white;
+}
+
