@@ -3,24 +3,33 @@ const functions = {
     console.log("hello World from functions")
   },
 
-  counter: 0,
+  i: 0,
   addCard: () => {
-    functions.counter++;
+    functions.i++;
     const newCard = document.createElement("div");
     newCard.className = "card";
-    newCard.id = functions.counter;
-    newCard.innerHTML = `Card Number ${functions.counter}
+    newCard.id = functions.i;
+    newCard.innerHTML = `Card ${functions.i}
     <br><button id="idBefore" class="btnL">Add Card Before</button>
     <br><button id="idAfter" class="btnL">Add Card After</button>
     <button id="idDelete"class="btnR">Delete Card</button>`;
     return newCard;
   },
-  delCard: (idIn) => {
-    // idIn.removeParent
-    // var x = document.getElementById("card2").previousSibling.innerHTML; 
-    idIn.remove();
-    // return console.log("inside delCard");
-    // return 0;
+
+  btnRunner: (event) => {
+    let btnParent = event.target.parentNode;
+    let newCardPlace = functions.addCard;
+    switch (event.target.id) {
+      case "idBefore":
+        leftSide.insertBefore(newCardPlace(), btnParent);
+        break;
+      case "idAfter":
+        btnParent.parentNode.insertBefore(newCardPlace(), btnParent.nextSibling);
+        break;
+      case "idDelete":
+        btnParent.remove();
+        break;
+    }
   },
 };
 
