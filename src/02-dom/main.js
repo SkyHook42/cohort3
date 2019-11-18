@@ -7,3 +7,8 @@ btnAddCard.addEventListener("click", (e) => {
 leftSide.addEventListener('click', (e) => {
   functions.btnCardPoser(e);
 })
+
+// leftSide.addEventListener('hover', (e) => {
+//   functions.btnCardPoser(e);
+// })
+

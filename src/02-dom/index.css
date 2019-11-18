@@ -22,6 +22,8 @@ body {
 }
 
 .btnL {
+  /* display: block; */
+  /* float: left; */
   font-weight: bold;
   padding: 1%;
   margin: 1%;
@@ -31,6 +33,7 @@ body {
 }
 
 .btnR {
+  /* display: block; */
   font-weight: bold;
   float: right;
   padding: 1%;
@@ -44,4 +47,14 @@ body {
   padding: 1%;
   margin: 1%;
   border-radius: 6px;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+@keyframes fadeIn {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+.card [key="cardLabel"] {
+  font-size: 200%;
+  margin: 0%;
 }

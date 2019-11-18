@@ -24,8 +24,8 @@ const functions = {
     const card = document.createElement("DIV");
     card.className = "card";
     card.id = functions.i;
-    card.innerHTML = `Card ${functions.i}
-    <br><button id="idBefore" class="btnL">Add Card Before</button>
+    card.innerHTML = `<div key="cardLabel">Card ${functions.i}</div>
+    <button id="idBefore" class="btnL">Add Card Before</button>
     <br><button id="idAfter" class="btnL">Add Card After</button>
     <button id="idDelete" class="btnR">Delete Card</button>`;
     return card;

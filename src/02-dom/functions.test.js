@@ -1,15 +1,24 @@
 import functions from "./functions.js"
 
 test('card builder', () => {
-  const testFunc = functions.createCard();
-  expect(testFunc.nodeType).toEqual(1);
-  expect(testFunc.id).toEqual("1");
-  expect(testFunc.tagName).toEqual("DIV");
-  expect(testFunc.classList.contains("card")).toEqual(true);
-  expect(testFunc.parentNode).toEqual(null);
+  const testCreate = functions.createCard();
+  expect(testCreate.nodeType).toEqual(1);
+  expect(testCreate.id).toEqual("1");
+  expect(testCreate.tagName).toEqual("DIV");
+  expect(testCreate.classList.contains("card")).toEqual(true);
+  expect(testCreate.parentNode).toEqual(null);
+  
+  const testParent = document.createElement("DIV");
+  const testChild = testParent.appendChild(testCreate);
+  expect(testParent.children[0].tagName).toEqual("DIV");
+  expect(testChild.tagName).toEqual("DIV");
+  
+  console.log("Maverick's hawk");
+  // parent node in, new card last child  
+  console.log(functions.cardLast(testParent));//undefined
+  // expect(functions.cardLast(testParent).parentNode.children[1].tagname).toEqual("DIV");
 
-  // console.log(testFunc.parentNode);! no parents yet!
-  // expect(functions.cardLast(testFunc.parentNode)).toEqual("leftSide");
+
   // expect(functions.cardAfter()).toEqual();
   // expect(functions.cardBefore()).toEqual();
   // expect(functions.cardDelete()).toEqual();
