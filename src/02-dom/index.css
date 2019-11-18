@@ -4,40 +4,44 @@ body {
 
 #leftSide {
   border: solid;
-  width: 49%;
+  width: 48%;
   min-height: 75px;
   float: left;
+  border-radius: 6px;
+  padding: 0.5%;
 }
 
 #rightSide {
   border: solid;
-  width: 49%;
+  width: 48%;
   min-height: 75px;
   float: right;
+  border-radius: 6px;
+  padding: 0.5%;
+  
+}
+
+.btnL {
+  font-weight: bold;
+  padding: 1%;
+  margin: 1%;
+  background-color: #9EFFAB;
+  border-radius: 4px;
+  width: 30%;
+}
+
+.btnR {
+  font-weight: bold;
+  float: right;
+  padding: 1%;
+  margin: 1%;
+  background-color: #FF9494;
+  border-radius: 4px;
 }
 
 .card {
   border:solid;
   padding: 1%;
   margin: 1%;
-  border-radius: 4px;
+  border-radius: 6px;
 }
-
-.btnL {
-  padding: 1%;
-  margin: 1%;
-  background-color: #30C841;
-  border-radius: 4px;
-  color: white;
-  width: 30%;
-}
-
-.btnR {
-  float: right;
-  padding: 1%;
-  margin: 1%;
-  background-color: #FF0000;
-  border-radius: 4px;
-  color: white;
-}
-

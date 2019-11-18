@@ -1,10 +1,9 @@
 import functions from "./functions.js"
 
-subCard.addEventListener("click", () => {
-  const newCard = functions.addCard();
-  leftSide.appendChild(newCard);
+btnAddCard.addEventListener("click", (e) => {
+  functions.cardLast(e.target.parentNode);
 })
 
-window.leftSide.addEventListener('click', (e) => {
-  functions.btnRunner(e);
+leftSide.addEventListener('click', (e) => {
+  functions.btnCardPoser(e);
 })

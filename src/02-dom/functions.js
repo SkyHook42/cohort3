@@ -3,33 +3,48 @@ const functions = {
     console.log("hello World from functions")
   },
 
-  i: 0,
-  addCard: () => {
-    functions.i++;
-    const newCard = document.createElement("div");
-    newCard.className = "card";
-    newCard.id = functions.i;
-    newCard.innerHTML = `Card ${functions.i}
-    <br><button id="idBefore" class="btnL">Add Card Before</button>
-    <br><button id="idAfter" class="btnL">Add Card After</button>
-    <button id="idDelete"class="btnR">Delete Card</button>`;
-    return newCard;
-  },
-
-  btnRunner: (e) => {
-    let btnParent = e.target.parentNode;
-    let newCardPlace = functions.addCard;
+  btnCardPoser: (e) => {
+    const cardSlot = e.target.parentNode;
     switch (e.target.id) {
       case "idBefore":
-        leftSide.insertBefore(newCardPlace(), btnParent);
+        functions.cardBefore(cardSlot);
         break;
       case "idAfter":
-        btnParent.parentNode.insertBefore(newCardPlace(), btnParent.nextSibling);
+        functions.cardAfter(cardSlot);
         break;
       case "idDelete":
-        btnParent.remove();
+        functions.cardDelete(cardSlot);
         break;
     }
+  },
+
+  i: 0,
+  createCard: () => {
+    functions.i++;
+    const card = document.createElement("DIV");
+    card.className = "card";
+    card.id = functions.i;
+    card.innerHTML = `Card ${functions.i}
+    <br><button id="idBefore" class="btnL">Add Card Before</button>
+    <br><button id="idAfter" class="btnL">Add Card After</button>
+    <button id="idDelete" class="btnR">Delete Card</button>`;
+    return card;
+  },
+
+  cardAfter: (cardNode) => {
+    cardNode.parentNode.insertBefore(functions.createCard(), cardNode.nextSibling);
+  },
+
+  cardBefore: (cardNode) => {
+    cardNode.parentNode.insertBefore(functions.createCard(), cardNode);
+  },
+
+  cardDelete: (cardNode) => {
+    cardNode.remove();
+  },
+
+  cardLast: (parNode) => {
+    parNode.appendChild(functions.createCard());
   },
 };
 

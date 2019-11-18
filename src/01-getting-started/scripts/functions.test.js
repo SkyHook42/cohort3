@@ -1,6 +1,6 @@
 import functions from './functions'
 
-// // #region Exercise - Canadian Taxes
+// #region Exercise - Canadian Taxes
 // test('tax calculator', () => {
 //   expect(functions.pctRate(55)).toEqual(0.55);
 //   const income=[0,1000,47630,50000,95259,100000,147667,150000,210371,300000];
