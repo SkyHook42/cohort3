@@ -6,7 +6,9 @@ test('card builder', () => {
   expect(testFunc.id).toEqual("1");
   expect(testFunc.tagName).toEqual("DIV");
   expect(testFunc.classList.contains("card")).toEqual(true);
-  // console.log(testFunc.parentNode);
+  expect(testFunc.parentNode).toEqual(null);
+
+  // console.log(testFunc.parentNode);! no parents yet!
   // expect(functions.cardLast(testFunc.parentNode)).toEqual("leftSide");
   // expect(functions.cardAfter()).toEqual();
   // expect(functions.cardBefore()).toEqual();
