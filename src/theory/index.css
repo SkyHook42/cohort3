@@ -2,6 +2,9 @@ figcaption {
   margin: auto;
 }
 
+.fldIn {
+}
+
 figure {
 	margin: 3%;
 }
@@ -25,6 +28,9 @@ pre {
 
 ul {
   list-style-type: circle;
+}
+.btnBinCalc {
+  margin: 1%;
 }
 
 .std {

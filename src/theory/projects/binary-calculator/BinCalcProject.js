@@ -9,8 +9,8 @@ const funcBinCalc = {
   },
 
   funcBinValid: (binIn) => {
-    console.log("funcBinValid says hi",binIn);
-    let arrBin=[];
+    console.log("funcBinValid says hi", binIn);
+    let arrBin = [];
     // test each character for ones and zero
     // return validity boolean
     // str;
@@ -27,6 +27,34 @@ const funcBinCalc = {
     // }
     // return binary sum
   },
+
+  // var bin1 = 0;
+  // var bin2 = 1;
+  // var sum = 0;
+  
+  redo: (x, y) => {
+    var x = false;
+    var y = false;
+    var dig1 = "";
+    var dig2 = "";
+    var a = !!(x && y);//x and y as boolean
+    var b = !x !== !y;//x xor y as boolean
+    console.log(a, b);
+    if (a === true) {
+      dig1 = "1";
+    } else {
+      dig1 = "0";
+    }
+
+    if (b === true) {
+      dig2 = "1";
+    } else {
+      dig2 = "0";
+    }
+    console.log(String(dig1) + String(dig2));
+  },
 };
+
+// console.log(sum = a+b);
 
 export default funcBinCalc;
