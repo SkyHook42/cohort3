@@ -1,4 +1,4 @@
-import functions from "./functions.js"
+import functions from "./functions.js";
 
 btnAddCard.addEventListener("click", (e) => {
   functions.cardLast(e.target.parentNode);

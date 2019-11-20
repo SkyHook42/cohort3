@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Theory</title>
+  </head>
+
+  <body>
+    <h4>project jump:</h4>
+    <ul>
+      <li><a href="#binCalc" id="binCalcLink">binary calculator</a></li>
+      <li><a href="#chess">chess moves</a></li>
+      <li><a href="#cannibals">logical cannibals</a></li>
+      <li><a href="#logicAND-OR-NOT NORs">logic AND-OR-NOT NORs</a></li>
+      <li>
+        <a href="#logic1">exclusive or inclusive or (disjunction)</a>
+      </li>
+      <li><a href="#hawk">Maverick's hawk</a></li>
+    </ul>
+    <h2 id="binCalc">binary calculator</h2>
+    <img
+      class="std"
+      src="/projects/binary-calculator/bAdder.png"
+      alt="bAdder.png placeholder"
+    />
+    <p>a = x AND y</p>
+    <p>b = x XOR y</p>
+    binary number 0b<input
+      type="text"
+      id="binCalcIn"
+      placeholder="ones and/or zeros"
+      maxlength="32"
+    />
+
+    <h2 id="chess">chess moves</h2>
+    <ol type="A">
+      <li>
+        Can you place 8 queens on a chess board so that they do not attack one
+        another?:
+        <figure class="std">
+          <figcaption>A: 7 queens max.</figcaption>
+          <img
+            class="std"
+            src="/projects/chess/7qMax.png"
+            alt="7qMax.png placeholder"
+          />
+        </figure>
+      </li>
+      <li>
+        Can you place 5 queens on a chess board so they attack all squares of
+        the chess board?:
+        <figure class="std">
+          <figcaption>
+            A: TRUE - several options, one example here.
+          </figcaption>
+          <img
+            class="std"
+            src="/projects/chess/5qAttack.png"
+            alt="5qAttack.png placeholder"
+          />
+        </figure>
+      </li>
+      <li>
+        Can you traverse the whole table with a knight (visit all squares) so
+        that you only visit every square just once?: A: Several attempts to
+        about 55 jumps before fail. Never found a pattern to complete the final
+        block where perimeters start to interfere with each other.
+      </li>
+    </ol>
+
+    <h2 id="cannibals">logical cannibals</h2>
+    <img
+      class="std"
+      src="/projects/cannibals/cannibals.png"
+      alt="cannibals.png placeholder"
+    />
+
+    <h2 id="logicAND-OR-NOT NORs">AND-OR-NOT NORs</h2>
+    <img
+      class="std"
+      src="/projects/logic/logicwk2.png"
+      alt="logicwk2.png placeholder"
+    />
+
+    <h2 id="logic1">exclusive or inclusive or (disjunction)</h2>
+    <ol type="1">
+      <li>
+        For each of the following sentences, determine whether the intended
+        meaning is exclusive or, or the intended meaning is inclusive or
+        (disjunction), in common speech.
+        <ol type="1">
+          <li>
+            Experience with React (R) or Angular (A) is required (Q)
+            <br />A: inclusive OR could be both or either - Q = R||A
+            <br />
+          </li>
+          <li>
+            A password(P) must have a special character (S) or contain at least
+            eight characters (P.length)
+            <br />A: inclusive OR could be both or either - P = P[S] ||
+            (P.length>=8)
+            <br />
+          </li>
+          <li>
+            Our dinner (D) package includes three courses (C) and wine (W) or
+            two courses and champagne (H)
+            <br />A: exclusive OR only one meal possible - D = (3C && W) || (2C
+            && H)
+            <br />
+          </li>
+          <li>
+            School (S) is closed if it's under -20 (C) or seven feet (F) of snow
+            fall overnight (O)
+            <br />A: inclusive OR could be both or either - S = C || F
+            <br />
+          </li>
+          <li>
+            For 50000 miles (M), you can get two seats in economy (E) or one
+            seat in business (B) class
+            <br />A: exclusive OR only one seating possible - M = 2E || B
+            <br />
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        State the converse (B>A), inverse (!A>!B) and contrapositive (!B>!A) of
+        the following implications:
+        <ol>
+          <li>
+            If it doesn't snow tonight, I'll go to a movie.
+            <ul>
+              <li>Co: If I go to a movie tonight it won't snow.</li>
+              <li>In: If it snows tonight I won't go to a movie.</li>
+              <li>Cp: I won't go to a movie if it snows tonight.</li>
+            </ul>
+          </li>
+
+          <li>
+            If my car is outside and it snows, I'll need to brush snow off in
+            the morning.
+            <ul>
+              <li>
+                Co: If I brush snow off in the morning, my car is outside and
+                it'll snow.
+              </li>
+              <li>
+                In: If my car isn't outside and it snows, I won't need to brush
+                the snow off in the morning.
+              </li>
+              <li>
+                Cp: I won't need to brush the snow off in the morning if my car
+                isn't outside and it snows.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            If you excel in JavaScript, you will find a great job.
+            <ul>
+              <li>Co: If you find a great job, you'll excel in JavaScript.</li>
+              <li>
+                In: If you don't excel in JavaScript, you won't find a great
+                job.
+              </li>
+              <li>
+                Cp: If you don't find a great job, you won't excel in
+                JavaScript.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            A positive integer is a prime only if it has no divisors other than
+            1 and itself.
+            <ul>
+              <li>
+                Co: If a prime has no divisors other than 1 and itself, it is a
+                positive integer.
+              </li>
+              <li>
+                In: A positive integer isn't a prime if it has more divisors
+                than 1 and itself.
+              </li>
+              <li>
+                Cp: If a prime has divisors other than 1 and itself, it isn't a
+                positive integer.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        Can you emulate AND statement using only NOT and OR statements? Imagine
+        that you have only NOT (negation) and OR (disjunction) at your disposal.
+        You have propositions p1 and p2, and you need to emulate their
+        conjunction (p1 AND p2) using only negation and disjunction. How can you
+        do that?
+        <ul>
+          <li>P1 && P2 = !(!P1||!P2)</li>
+        </ul>
+      </li>
+    </ol>
+    <h2 id="hawk">Maverick's hawk</h2>
+    <div>When Maverick sees the hawk, he says to Annabelle, "You know what that hawk means? Absolutely nothing." This is a sly reference to <a href="https://www.imdb.com/title/tt0089457" target="_blank" rel="noreferrer">Ladyhawke</a> (1985) which was also directed by Richard Donner and produced by his then future-wife, Lauren Shuler.
+    </div>
+    <pre>
+      See that hawk? I won't shoot the hawk.
+      You know what that hawk means?
+      Nothing, but you didn't know that.
+      - I did!
+      You didn't.</pre>
+    <div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
