@@ -1,69 +1,67 @@
 const functions = {
-  helloworld: () => {
-    console.log("hello World from functions")
-  },
-
-  btnCardPoser: (e) => {
+  // decide which button was selected
+  fBtnChooser: (e) => {
     const cardSlot = e.target.parentNode;
-    switch (e.target.getAttribute.key) {
-      case "keyBefore":
-        functions.cardBefore(cardSlot);
+    switch (e.target.innerText) {
+      case "Add Card":
+        functions.fCardLast(e);
         break;
-      case "keyAfter":
-        functions.cardAfter(cardSlot);
+      case "Add Before":
+        functions.fCardBefore(cardSlot);
         break;
-      case "keyDelete":
-        functions.cardDelete(cardSlot);
+      case "Add After":
+        functions.fCardAfter(cardSlot);
+        break;
+      case "Delete":
+        functions.fCardDelete(cardSlot);
         break;
     }
   },
 
   i: 0,
-  createCard: () => {
+  // create new card
+  fCreateCard: () => {
     functions.i++;
     const card = document.createElement("DIV");
     card.className = "card";
-    card.setAttribute("key", functions.i);
-    let cardHead = document.createTextNode("Card " + functions.i);
-    // cardHead.setAttribute("class","bobby");//maybe later, not requirement
-    card.appendChild(cardHead);
-
-    const btnCardBF = document.createElement("BUTTON");
-    btnCardBF.setAttribute("key", "keyBefore");
-    btnCardBF.setAttribute("class", "btnL");
-    btnCardBF.setAttribute("type", "button");
-    btnCardBF.innerText = "Add Before";
-    card.appendChild(btnCardBF);
-    const btnCardAF = document.createElement("BUTTON");
-    btnCardAF.setAttribute("key", "keyAfter");
-    btnCardAF.setAttribute("class", "btnL");
-    btnCardAF.setAttribute("type", "button");
-    btnCardAF.innerText = "Add After";
-    card.appendChild(btnCardAF);
+    card.innerText = "Card " + functions.i;
     const btnCardDel = document.createElement("BUTTON");
-    btnCardDel.setAttribute("key", "keyDelete");
-    btnCardDel.setAttribute("class", "btnR");
     btnCardDel.setAttribute("type", "button");
+    btnCardDel.setAttribute("class", "btnR");
     btnCardDel.innerText = "Delete";
+    const btnCardBF = document.createElement("BUTTON");
+    btnCardBF.setAttribute("type", "button");
+    btnCardBF.setAttribute("class", "btnL");
+    btnCardBF.innerText = "Add Before";
+    const btnCardAF = document.createElement("BUTTON");
+    btnCardAF.setAttribute("type", "button");
+    btnCardAF.setAttribute("class", "btnL");
+    btnCardAF.innerText = "Add After";
+
+    card.appendChild(btnCardBF);
     card.appendChild(btnCardDel);
+    card.appendChild(btnCardAF);
     return card;
   },
 
-  cardAfter: (cardNode) => {
-    cardNode.parentNode.insertBefore(functions.createCard(), cardNode.nextSibling);
+  // insert new card after current card
+  fCardAfter: (nodeCard) => {
+    return nodeCard.after(functions.fCreateCard());
   },
 
-  cardBefore: (cardNode) => {
-    cardNode.parentNode.insertBefore(functions.createCard(), cardNode);
+  // insert new card before current card
+  fCardBefore: (nodeCard) => {
+    return nodeCard.before(functions.fCreateCard());
   },
 
-  cardDelete: (cardNode) => {
-    console.log("cardDelete", cardNode.remove());
-    return cardNode.remove();
+  // current card deleted
+  fCardDelete: (nodeCard) => {    
+    return nodeCard.remove();
   },
 
-  cardLast: (parNode) => {
-    return parNode.appendChild(functions.createCard());
+  // insert new card end of all cards
+  fCardLast: (e) => {
+    return e.target.parentNode.appendChild(functions.fCreateCard());
   },
 };
 

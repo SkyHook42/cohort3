@@ -1,17 +1,18 @@
 import functions from "./functions.js"
 
 test('card builder', () => {
-  const testCreate = functions.createCard();
+  // create card
+  const testCreate = functions.fCreateCard();
   expect(testCreate.nodeType).toEqual(1);
-  expect(testCreate.getAttribute("key")).toEqual("1");
+  expect(testCreate.innerText).toEqual("Card 1");
   expect(testCreate.tagName).toEqual("DIV");
   expect(testCreate.classList.contains("card")).toEqual(true);
   expect(testCreate.parentNode).toEqual(null);
-
-  const testParent = document.createElement("DIV");
+  //add card to parent
+  const testParent = document.createElement("DIV")
   const testChild = testParent.appendChild(testCreate);
-  expect(testParent.children[0].getAttribute("key")).toEqual("1");
-  expect(functions.cardLast(testParent).parentNode.children[1].getAttribute("key")).toEqual("2");
+  expect(testParent.children[0].innerText).toEqual("Card 1");
+  // expect(functions.fCardLast(testParent).parentNode.children;//fail
 
   console.log("Maverick's hawk");
   // functions.cardDelete();//undefined

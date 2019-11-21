@@ -2,7 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#leftSide {
+.leftSide {
   border: solid;
   width: 48%;
   min-height: 75px;
@@ -11,7 +11,7 @@ body {
   padding: 0.5%;
 }
 
-#rightSide {
+.rightSide {
   border: solid;
   width: 48%;
   min-height: 75px;
@@ -21,27 +21,29 @@ body {
 }
 
 .btnL {
-  /* display: block; */
+  display: block;
   /* float: left; */
   font-weight: bold;
   padding: 1%;
   margin: 1%;
   background-color: #9EFFAB;
   border-radius: 4px;
-  width: 30%;
+  width: 20%;
 }
 
 .btnR {
-  /* display: block; */
-  font-weight: bold;
+  display: block;
   float: right;
+  font-weight: bold;
   padding: 1%;
   margin: 1%;
   background-color: #FF9494;
   border-radius: 4px;
+  width: 20%;
 }
 
 .card {
+  font-size: 160%;
   border:solid;
   padding: 1%;
   margin: 1%;
@@ -52,8 +54,4 @@ body {
 @keyframes fadeIn {
   from {opacity: 0%;}
   to {opacity: 100%;}
-}
-.card [key="cardLabel"] {
-  font-size: 200%;
-  margin: 0%;
 }
