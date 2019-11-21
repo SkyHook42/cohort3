@@ -5,14 +5,14 @@ const functions = {
 
   btnCardPoser: (e) => {
     const cardSlot = e.target.parentNode;
-    switch (e.target.id) {
-      case "idBefore":
+    switch (e.target.getAttribute.key) {
+      case "keyBefore":
         functions.cardBefore(cardSlot);
         break;
-      case "idAfter":
+      case "keyAfter":
         functions.cardAfter(cardSlot);
         break;
-      case "idDelete":
+      case "keyDelete":
         functions.cardDelete(cardSlot);
         break;
     }
@@ -23,11 +23,29 @@ const functions = {
     functions.i++;
     const card = document.createElement("DIV");
     card.className = "card";
-    card.id = functions.i;
-    card.innerHTML = `<div key="cardLabel">Card ${functions.i}</div>
-    <button id="idBefore" class="btnL">Add Card Before</button>
-    <br><button id="idAfter" class="btnL">Add Card After</button>
-    <button id="idDelete" class="btnR">Delete Card</button>`;
+    card.setAttribute("key", functions.i);
+    let cardHead = document.createTextNode("Card " + functions.i);
+    // cardHead.setAttribute("class","bobby");//maybe later, not requirement
+    card.appendChild(cardHead);
+
+    const btnCardBF = document.createElement("BUTTON");
+    btnCardBF.setAttribute("key", "keyBefore");
+    btnCardBF.setAttribute("class", "btnL");
+    btnCardBF.setAttribute("type", "button");
+    btnCardBF.innerText = "Add Before";
+    card.appendChild(btnCardBF);
+    const btnCardAF = document.createElement("BUTTON");
+    btnCardAF.setAttribute("key", "keyAfter");
+    btnCardAF.setAttribute("class", "btnL");
+    btnCardAF.setAttribute("type", "button");
+    btnCardAF.innerText = "Add After";
+    card.appendChild(btnCardAF);
+    const btnCardDel = document.createElement("BUTTON");
+    btnCardDel.setAttribute("key", "keyDelete");
+    btnCardDel.setAttribute("class", "btnR");
+    btnCardDel.setAttribute("type", "button");
+    btnCardDel.innerText = "Delete";
+    card.appendChild(btnCardDel);
     return card;
   },
 
@@ -40,11 +58,12 @@ const functions = {
   },
 
   cardDelete: (cardNode) => {
-    cardNode.remove();
+    console.log("cardDelete", cardNode.remove());
+    return cardNode.remove();
   },
 
   cardLast: (parNode) => {
-    parNode.appendChild(functions.createCard());
+    return parNode.appendChild(functions.createCard());
   },
 };
 
