@@ -33,8 +33,9 @@ const funcBinCalc = {
   // var sum = 0;
   
   redo: (x, y) => {
-    var x = false;
-    var y = false;
+    // function redo(x,y) {
+    // var x = false;
+    // var y = false;
     var dig1 = "";
     var dig2 = "";
     var a = !!(x && y);//x and y as boolean
@@ -51,7 +52,7 @@ const funcBinCalc = {
     } else {
       dig2 = "0";
     }
-    console.log(String(dig1) + String(dig2));
+    // console.log(String(dig1) + String(dig2));
   },
 };
 

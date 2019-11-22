@@ -20,6 +20,10 @@ body {
   padding: 0.5%;
 }
 
+/* .btnDOM {
+  /* float: left; */
+} */
+
 .btnL {
   display: block;
   /* float: left; */
@@ -55,3 +59,30 @@ body {
   from {opacity: 0%;}
   to {opacity: 100%;}
 }
+.DOMbox {
+  border: solid;
+  width: 30%;  
+  /* margin-left: auto ;
+  margin-right: auto ; */
+  /* min-height: 75px; */
+  border-radius: 6px;
+  padding: 0.5%;
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+}
+
+.DOMliner {
+  text-align:left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.olMiddle li {
+  list-style-position:  inside;
+    /* display: block; */
+    /* text-align: center; */
+}
+    
