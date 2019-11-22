@@ -1,5 +1,5 @@
 const functions = {
-  // decide which button was selected
+  // decide button selected
   fBtnChooser: (e) => {
     const cardSlot = e.target.parentNode;
     switch (e.target.innerText) {
@@ -19,7 +19,7 @@ const functions = {
   },
 
   i: 0,
-  // create new card
+  // create new card  
   fCreateCard: () => {
     functions.i++;
     const card = document.createElement("DIV");
@@ -55,7 +55,7 @@ const functions = {
   },
 
   // current card deleted
-  fCardDelete: (nodeCard) => {    
+  fCardDelete: (nodeCard) => {
     return nodeCard.remove();
   },
 
@@ -64,5 +64,4 @@ const functions = {
     return e.target.parentNode.appendChild(functions.fCreateCard());
   },
 };
-
 export default functions;

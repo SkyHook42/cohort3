@@ -2,29 +2,25 @@ import functions from "./functions.js"
 
 test('card builder', () => {
   // create card
-  const testCreate = functions.fCreateCard();
-  expect(testCreate.nodeType).toEqual(1);
-  expect(testCreate.innerText).toEqual("Card 1");
-  expect(testCreate.tagName).toEqual("DIV");
-  expect(testCreate.classList.contains("card")).toEqual(true);
-  expect(testCreate.parentNode).toEqual(null);
-  //add card to parent
+  const testCreate1 = functions.fCreateCard();
+  expect(testCreate1.nodeType).toEqual(1);
+  expect(testCreate1.innerText).toEqual("Card 1");
+  expect(testCreate1.classList.contains("card")).toEqual(true);
+  expect(testCreate1.parentNode).toEqual(null);
+  //create parent add more cards 
   const testParent = document.createElement("DIV")
-  const testChild = testParent.appendChild(testCreate);
-  expect(testParent.children[0].innerText).toEqual("Card 1");
-  // expect(functions.fCardLast(testParent).parentNode.children;//fail
-
-  console.log("Maverick's hawk");
-  // functions.cardDelete();//undefined
-  // expect(document.parentNode.children[0]).toEqual("2");
-  // expect(functions.cardLast(testParent).parentNode.children[2].tagname).toEqual("DIV");
-  
-  // console.log(functions.cardLast(testParent).tagName);
-  // expect(functions.cardAfter()).toEqual();
-  // expect(functions.cardBefore()).toEqual();
-  // expect(functions.cardDelete()).toEqual();
-  // expect(functions.btnCardPoser()).toEqual();
+  testParent.appendChild(testCreate1);
+  const testCreate2 = functions.fCreateCard();
+  testParent.appendChild(testCreate2);
+  const testCreate3 = functions.fCreateCard();
+  testParent.appendChild(testCreate3);
+  // delete card
+  functions.fCardDelete(testCreate2);
+  expect(testParent.children[1].innerText).toEqual("Card 3");
+  // insert card before
+  functions.fCardBefore(testCreate3);
+  expect(testParent.children[1].innerText).toEqual("Card 4");
+  // insert card after
+  functions.fCardAfter(testCreate1);
+  expect(testParent.children[1].innerText).toEqual("Card 5");
 });
-
-// document.createElement("div")
-// expect(functions.addCard.id).toEqual(functions.i++);
