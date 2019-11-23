@@ -1,14 +1,15 @@
-import functions from "./functions.js"
+import functions from "./functions.js";
 
-test('card builder', () => {
+// #region cards
+test("card builder", () => {
   // create card
   const testCreate1 = functions.fCreateCard();
   expect(testCreate1.nodeType).toEqual(1);
   expect(testCreate1.innerText).toEqual("Card 1");
   expect(testCreate1.classList.contains("card")).toEqual(true);
   expect(testCreate1.parentNode).toEqual(null);
-  //create parent add more cards 
-  const testParent = document.createElement("DIV")
+  //create parent add more cards
+  const testParent = document.createElement("DIV");
   testParent.appendChild(testCreate1);
   const testCreate2 = functions.fCreateCard();
   testParent.appendChild(testCreate2);
@@ -24,3 +25,14 @@ test('card builder', () => {
   functions.fCardAfter(testCreate1);
   expect(testParent.children[1].innerText).toEqual("Card 5");
 });
+// #endregion cards
+
+// #region DOM
+test("DOM sandbox", () => {
+  // Show button action
+  const testShow = functions.fDOMShow();
+  expect(testShow.nodeType).toEqual(3); // #3 is text node
+	// Add button action
+	
+});
+// #endregion DOM
