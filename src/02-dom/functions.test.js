@@ -29,10 +29,7 @@ test("card builder", () => {
 
 // #region DOM
 test("DOM sandbox", () => {
-  // Show button action
-  const testShow = functions.fDOMShow();
-  expect(testShow.nodeType).toEqual(3); // #3 is text node
-	// Add button action
-	
+  // let testEvent = new Event("click");
+  // btnShow.dispatchEvent(testEvent);
 });
 // #endregion DOM

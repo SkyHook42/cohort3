@@ -5,7 +5,7 @@ leftSide.addEventListener("click", e => {
 });
 
 idDomProject.addEventListener("click", e => {
-  functions.fDOMSandbox(e);
+  functions.fDOM(e);
 });
 
 idShow.addEventListener("click", e => {

@@ -1,5 +1,5 @@
 const functions = {
-  // #region cards
+  // #region Working with Cards
   // decide button selected
   fBtnChooser: e => {
     const cardSlot = e.target.parentNode;
@@ -58,7 +58,7 @@ const functions = {
     return nodeCard.before(functions.fCreateCard());
   },
 
-  // current card deleted
+  // current card delete
   fCardDelete: nodeCard => {
     return nodeCard.remove();
   },
@@ -67,27 +67,49 @@ const functions = {
   fCardLast: e => {
     return e.target.parentNode.appendChild(functions.fCreateCard());
   },
-  // #endregion cards
+  // #endregion Working with Cards
 
-  // #region DOM
-  // DOM exercise playground
-  fDOMSandbox: e => {
-    console.log("fDOMSandbox says hi", e);
+  // #region The Basic DOM
+  // show on the console the parameter passed to the event listener
+  fDOM: e => {
+    console.log("fDOM says hi", e);
   },
 
+  // add an event on the show button that displays all the “Children” of the <ol> tag
   fDOMShow: e => {
-    console.log("fDOMShow says hi", e);
-    // 	// add an event on the show button that displays all the “Children” of the <ol> tag
-    let nodeAllChildren = e.target.parentNode.createElement(Text);
-    console.log();
-    // nodeAllChildren.innerText("")
-    // e.target.parentNode.appendChild
+    // remove old report if present
+    const nOldList = document.getElementById("idListReport");
+    if (nOldList) {
+      nOldList.remove();
+    }
+
+    //  build new report
+    const oChildren = idOList.childNodes;
+    let sList = "";
+    for (functions.i = 0; functions.i < oChildren.length; functions.i++) {
+      sList =
+        sList +
+        "<br>" +
+        "node: " +
+        oChildren[functions.i].nodeName +
+        ", " +
+        "value: " +
+        oChildren[functions.i].textContent;
+    }
+
+    // render report
+    const nChildList = document.createElement("DIV");
+    nChildList.setAttribute("id", "idListReport");
+    nChildList.innerHTML = "<br>" + "List children: " + sList;
+    const btnBox = e.target.parentNode.parentNode;
+    btnBox.appendChild(nChildList);
   },
 
+  // add an event on the add button that will add a <li> tag to the end of the list
   fDOMAdd: e => {
-    console.log("fDOMAdd says hi", e);
-    // 	// add an event on the add button that will add a <li> tag to the end of the list
+    const nLastChild = document.createElement("LI");
+    idOList.appendChild(nLastChild);
   }
-  // #endregion DOM
+  // #endregion The Basic DOM
 };
 export default functions;
