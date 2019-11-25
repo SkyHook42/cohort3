@@ -1,4 +1,30 @@
 const functions = {
+  // #region November 21, 2019 - Callback Exercise (Part 2)
+  // Based on callback exercise, part 1, now write a function 
+  // - using the generic callback function
+  //     - people from BC and Alberta only
+  //     - the total number = fCallBack.length
+  //     - total age = .reduce
+  //     - average age = reduce/length
+  // - return an object
+  fTotAvg: (arrIn, fCallBack) => {
+    let objOut = {};
+    objOut.countTot=0;
+    objOut.ageTot=0;
+    objOut.ageAvg=0;
+    console.log(functions.fNameBuilder);
+    // console.log(functions.fFindBCAB(arrIn, functions.fNameBuilder));
+
+    // fCallBack(arrIn, functions.fFindBCAB(arrIn, functions.fNameBuilder));
+    // console.log(fCallBack(arrIn, functions.fNameBuilder));
+    // objOut = fCallBack(arrIns, functions.fNameBuilder);
+    return objOut;
+  },
+  // #endregion November 21, 2019 - Callback Exercise (Part 2)
+
+  // #region November 14, 2019 - Pair Programming
+  // #endregion November 14, 2019 - Pair Programming
+
   // #region Callback Exercise (Part 1) - November 8, 2019
   fFindBCAB: (arrIn, fCallBack) => {
     const arrOut = [];
@@ -303,7 +329,3 @@ const functions = {
   // #endregion AssertEquals - October 7, 2019
 }
 export default functions;
-
-// #region probably trash
-
-// #endregion probably trash
