@@ -1,16 +1,12 @@
 import functions from "./daily.js";
 
 // #region Callback Exercise (Part 1) - November 8, 2019
-test("Callback Exercise (Part 1)", () => {
-  expect(functions.findBCAB(people)[0].province).toEqual("BC");
-  expect(functions.findBCAB(people)[1].province).toEqual("AB");
-  expect(functions.findBCAB(people).length != people.length).toEqual(true);
-  expect(functions.nameBCAB(people)[0]).toEqual("Alex Smith");
-  expect(functions.nameBCAB(people)[1]).toEqual("Angela Jones");
-  expect(functions.nameBCAB(people).length == people.length).toEqual(true);
-  expect(functions.nameBCAB(people).length == functions.findBCAB(people).length).toEqual(false);
-  expect(functions.callbackDaily(people).length != people.length).toEqual(true);
-  expect(functions.callbackDaily2(people,functions.findBCAB,functions.nameBCAB).length != people.length).toEqual(true);
+test("Callback Exercise 1", () => {
+  expect(functions.fNameBuilder(people).length == functions.fFindBCAB(people, functions.fNameBuilder).length).toEqual(false);
+  expect(functions.fFindBCAB(people, functions.fNameBuilder)[2]).toEqual("Byron Cardenas");
+  expect(functions.fNameBuilder(people)[0]).toEqual("Alex Smith");
+  expect(functions.fNameBuilder(people)[1]).toEqual("Angela Jones");
+  expect(functions.fNameBuilder(people).length == people.length).toEqual(true);
 });
 // #endregion Callback Exercise (Part 1) - November 8, 2019
 

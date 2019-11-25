@@ -1,21 +1,18 @@
 const functions = {
   // #region Callback Exercise (Part 1) - November 8, 2019
-  findBCAB: (arrIn) => {
-    return arrIn.filter(item => item.province === "BC" || item.province === "AB");
+  fFindBCAB: (arrIn, fCallBack) => {
+    const arrOut = [];
+    for (const item of arrIn) {
+      if (item.province === "AB" || item.province === "BC") {
+        arrOut.push(item);
+      }
+    }
+    return fCallBack(arrOut);
   },
 
-  nameBCAB: (arrIn) => {
-    let arrOut = [];
-    arrOut = arrIn.map(item => item.fname + " " + item.lname)
+  fNameBuilder: (arrIn) => {
+    const arrOut = arrIn.map(item => item.fname + " " + item.lname);
     return arrOut;
-  },
-
-  callbackDaily: (arrIn) => {
-    return functions.nameBCAB(functions.findBCAB(arrIn));
-  },
-
-  callbackDaily2: (arrIn, funcIn1, funcIn2) => {
-    return funcIn2(funcIn1(arrIn));
   },
   // #endregion Callback Exercise (Part 1) - November 8, 2019
 

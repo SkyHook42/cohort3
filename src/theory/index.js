@@ -1,4 +1,4 @@
-import funcBinCalc from "/projects/binary-calculator/BinCalcProject.js";
+import fBinCalc from "/projects/binary-calculator/BinCalcProject.js";
 
 document.getElementById("idBinCalcWork").addEventListener("keydown", e => {
   if (e.keyCode === 13) {

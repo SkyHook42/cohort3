@@ -1,8 +1,10 @@
-import funcBinCalc from "./BinCalcProject.js";
+// import fBinCalc from "./BinCalcProject.js";
+import fBinCalc from "projects/binary-calculator/BinCalcProject.js";
 
-test('binary adder', () => {
+test('binary calc', () => {
   // const testCreate = functions.createCard();
-  console.log("BinCalcProject.test.js Maverick's hawk");
-  console.log(funcBinCalc.funcHello);
+  console.log("BinCalcProject.test.js");
+  console.log(fBinCalc.fHello);
   // expect(funcBinCalc.funcHello).toEqual("BinCalcProject.js says hi");
+  // console.log("Maverick's hawk");
 });

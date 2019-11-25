@@ -1,15 +1,15 @@
-const funcBinCalc = {
+const fBinCalc = {
   // funcMoveFocus: focusID => {
   //   // use the input field as the focus target when clicking on section link
   //   return "";
   // }
 
-  funcHello: () => {
+  fHello: () => {
     console.log("BinCalcProject.js says hi");
   },
 
-  funcBinValid: (binIn) => {
-    console.log("funcBinValid says hi", binIn);
+  fBinValid: (binIn) => {
+    console.log("fBinValid says hi", binIn);
     let arrBin = [];
     // test each character for ones and zero
     // return validity boolean
@@ -18,7 +18,7 @@ const funcBinCalc = {
     return arrBin;
   },
 
-  funcBinAdd: () => {
+  fBinAdd: () => {
     // take two binary inputs and add them
     // var xor1 = !(a === b);
     // or maybe the following
@@ -58,4 +58,4 @@ const funcBinCalc = {
 
 // console.log(sum = a+b);
 
-export default funcBinCalc;
+export default fBinCalc;
