@@ -1,4 +1,11 @@
 const functions = {
+  // #region Destructuring-assignment - November 26, 2019
+  fDestructor: (arrIn) => {
+    let [first, second, third] = arrIn;
+    return (first["lname"]+second["province"]+third["age"]);
+  },
+  // #endregion Destructuring-assignment - November 26, 2019
+
   // #region November 21, 2019 - Callback Exercise (Part 2)
   // Based on callback exercise, part 1, now write a function 
   // - using the generic callback function
@@ -9,9 +16,9 @@ const functions = {
   // - return an object
   fTotAvg: (arrIn, fCallBack) => {
     let objOut = {};
-    objOut.countTot=0;
-    objOut.ageTot=0;
-    objOut.ageAvg=0;
+    objOut.countTot = 0;
+    objOut.ageTot = 0;
+    objOut.ageAvg = 0;
     console.log(functions.fNameBuilder);
     // console.log(functions.fFindBCAB(arrIn, functions.fNameBuilder));
 

@@ -1,11 +1,17 @@
 import functions from "./daily.js";
-import { isArrayExpression } from "@babel/types";
+// #region Destructuring-assignment - November 26, 2019
+test("Destructor test", () => {
+  expect(functions.fDestructor(people)).toEqual("SmithAB35");
+});
+
+// #endregion Destructuring-assignment - November 26, 2019
+
 // #region November 21, 2019 - Callback Exercise (Part 2)
 // Based on callback exercise, part 1, now write a function using the generic callback function which returns an object of the total number of people, total age, and the average age of people from BC and Alberta only.
 test("Callback Exercise 2", () => {
-  expect(Object.keys(functions.fTotAvg(people,functions.fFindBCAB))).toEqual(["countTot", "ageTot", "ageAvg"]);
+  expect(Object.keys(functions.fTotAvg(people, functions.fFindBCAB))).toEqual(["countTot", "ageTot", "ageAvg"]);
   // expect((functions.fTotAvg(people,functions.fFindBCAB).countTot)==(functions.fNameBuilder(people).length)).toEqual(true);
-    // (people).length == functions.fFindBCAB(people, functions.fNameBuilder).length).toEqual(false);
+  // (people).length == functions.fFindBCAB(people, functions.fNameBuilder).length).toEqual(false);
 
   // expect(functions.fNameBuilder(people).length == functions.fFindBCAB(people, functions.fNameBuilder).length).toEqual(false);
   // expect(functions.fFindBCAB(people, functions.fNameBuilder)[2]).toEqual("Byron Cardenas");
