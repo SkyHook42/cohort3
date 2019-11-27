@@ -1,7 +1,6 @@
 import functions from "./daily.js";
 // #region Destructuring-assignment - November 26, 2019
 test("Destructor test", () => {
-  // console.log(people);
   expect(functions.fDestructor(people)).toEqual("SmithAB35");
   expect(functions.fDestructHarder(people, functions.fNameBuilder)).toEqual("A a");
 });
@@ -10,16 +9,9 @@ test("Destructor test", () => {
 // #region November 21, 2019 - Callback Exercise (Part 2)
 // Based on callback exercise, part 1, now write a function using the generic callback function which returns an object of the total number of people, total age, and the average age of people from BC and Alberta only.
 test("Callback Exercise 2", () => {
-  expect(Object.keys(functions.fTotAvg(people, functions.fFindBCAB))).toEqual(["countTot", "ageTot", "ageAvg"]);
-  // expect((functions.fTotAvg(people,functions.fFindBCAB).countTot)==(functions.fNameBuilder(people).length)).toEqual(true);
-  // (people).length == functions.fFindBCAB(people, functions.fNameBuilder).length).toEqual(false);
-
-  // expect(functions.fNameBuilder(people).length == functions.fFindBCAB(people, functions.fNameBuilder).length).toEqual(false);
-  // expect(functions.fFindBCAB(people, functions.fNameBuilder)[2]).toEqual("Byron Cardenas");
-  // expect(functions.fNameBuilder(people)[0]).toEqual("Alex Smith");
-  // expect(functions.fNameBuilder(people)[1]).toEqual("Angela Jones");
-  // expect(functions.fNameBuilder(people).length == people.length).toEqual(true);
-})
+  expect(functions.fPushBCAB(people).length).toEqual(22);
+  expect(functions.fTotAvg(people, functions.fFindBCAB)).toEqual({ "allCount": 22, "allAge": 838, "avgAge": 38.09 });
+});
 
 // #endregion November 21, 2019 - Callback Exercise (Part 2)
 

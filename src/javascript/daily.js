@@ -12,25 +12,26 @@ const functions = {
   // #endregion Destructuring-assignment - November 26, 2019
 
   // #region November 21, 2019 - Callback Exercise (Part 2)
-  // Based on callback exercise, part 1, now write a function 
-  // - using the generic callback function
-  //     - people from BC and Alberta only
-  //     - the total number = fCallBack.length
-  //     - total age = .reduce
-  //     - average age = reduce/length
-  // - return an object
-  fTotAvg: (arrIn, fCallBack) => {
+  fTotAvg: (arrIn, fCall) => {
     let objOut = {};
-    objOut.countTot = 0;
-    objOut.ageTot = 0;
-    objOut.ageAvg = 0;
-    console.log(functions.fNameBuilder);
-    // console.log(functions.fFindBCAB(arrIn, functions.fNameBuilder));
-
-    // fCallBack(arrIn, functions.fFindBCAB(arrIn, functions.fNameBuilder));
-    // console.log(fCallBack(arrIn, functions.fNameBuilder));
-    // objOut = fCallBack(arrIns, functions.fNameBuilder);
+    let countTot = 0;
+    let ageTot = 0;
+    let ageAvg = 0;
+    countTot = fCall(arrIn, functions.fNameBuilder).length;
+    ageTot = functions.fPushBCAB(arrIn).reduce((acc, objItem) => acc + objItem.age, 0);
+    ageAvg = Number((ageTot / countTot).toFixed(2));
+    objOut = { "allCount": countTot, "allAge": ageTot, "avgAge": ageAvg };
     return objOut;
+  },
+
+  fPushBCAB: (arrIn) => {
+    const arrOut = [];
+    for (const item of arrIn) {
+      if (item.province === "AB" || item.province === "BC") {
+        arrOut.push(item);
+      }
+    }
+    return arrOut;
   },
   // #endregion November 21, 2019 - Callback Exercise (Part 2)
 
