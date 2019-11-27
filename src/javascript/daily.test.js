@@ -1,9 +1,10 @@
 import functions from "./daily.js";
 // #region Destructuring-assignment - November 26, 2019
 test("Destructor test", () => {
+  // console.log(people);
   expect(functions.fDestructor(people)).toEqual("SmithAB35");
+  expect(functions.fDestructHarder(people, functions.fNameBuilder)).toEqual("A a");
 });
-
 // #endregion Destructuring-assignment - November 26, 2019
 
 // #region November 21, 2019 - Callback Exercise (Part 2)
@@ -18,7 +19,7 @@ test("Callback Exercise 2", () => {
   // expect(functions.fNameBuilder(people)[0]).toEqual("Alex Smith");
   // expect(functions.fNameBuilder(people)[1]).toEqual("Angela Jones");
   // expect(functions.fNameBuilder(people).length == people.length).toEqual(true);
-});
+})
 
 // #endregion November 21, 2019 - Callback Exercise (Part 2)
 
@@ -310,13 +311,11 @@ const data = {
   prov: "Alberta"
 };
 
-const myTestData = {
-  staff: [
-    { fname: "Tom", lname: "Smith", balance: 10 },
-    { fname: "Dick", lname: "Jones", balance: 500 },
-    { fname: "Harry", lname: "Palmer", balance: 27000 },
-  ],
-  company: "Dogless",
-  city: "Springfield",
-  prov: "Nunavut",
-};
+const myTestData = [
+  { fname: "Tom", lname: "Smith", balance: 10 },
+  { fname: "Dick", lname: "Jones", balance: 500 },
+  { fname: "Harry", lname: "Palmer", balance: 27000 },
+  // company: "Dogless",
+  // city: "Springfield",
+  // prov: "Nunavut",
+];

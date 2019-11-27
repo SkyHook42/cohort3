@@ -2,7 +2,12 @@ const functions = {
   // #region Destructuring-assignment - November 26, 2019
   fDestructor: (arrIn) => {
     let [first, second, third] = arrIn;
-    return (first["lname"]+second["province"]+third["age"]);
+    return (first["lname"] + second["province"] + third["age"]);
+  },
+
+  fDestructHarder: (arrIn, fCallBack) => {
+    let [first, second] = fCallBack(arrIn);
+    return first[0] + " " + second[5];
   },
   // #endregion Destructuring-assignment - November 26, 2019
 
@@ -33,6 +38,7 @@ const functions = {
   // #endregion November 14, 2019 - Pair Programming
 
   // #region Callback Exercise (Part 1) - November 8, 2019
+  // input array & function, output AB/BC-only map of "fname lname"
   fFindBCAB: (arrIn, fCallBack) => {
     const arrOut = [];
     for (const item of arrIn) {
@@ -42,7 +48,7 @@ const functions = {
     }
     return fCallBack(arrOut);
   },
-
+  // input array, output map of "fname lname"
   fNameBuilder: (arrIn) => {
     const arrOut = arrIn.map(item => item.fname + " " + item.lname);
     return arrOut;
