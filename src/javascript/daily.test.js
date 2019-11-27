@@ -6,6 +6,20 @@ test("Destructor test", () => {
 });
 // #endregion Destructuring-assignment - November 26, 2019
 
+// #region Three ways of functions - November 22, 2019
+
+//Write 3 functions (with tests): 
+// 1) Anonymous function 
+// 2) Named function
+// 3) Arrow function
+// these functions complete the following exercise.  
+// Sort the array:
+// By number ascending, using anonymous function
+// By fruit alphabetic, using named function
+// By origin reverse alphabetic, using arrow function
+
+// #endregion Three ways of functions - November 22, 2019
+
 // #region November 21, 2019 - Callback Exercise (Part 2)
 // Based on callback exercise, part 1, now write a function using the generic callback function which returns an object of the total number of people, total age, and the average age of people from BC and Alberta only.
 test("Callback Exercise 2", () => {
@@ -240,6 +254,18 @@ test("AssertEquals", () => {
   expect(functions.assertEquals("This value", "This value")).toBe(true);
 });
 // #endregion AssertEquals - October 7, 2019
+
+const myArray = [
+  { num: 5, str: "apples", origin: "BC" },
+  { num: 7, str: "oranges", origin: "Florida" },
+  { num: 2, str: "lemons", origin: "Mexico" },
+  { num: 8, str: "bananas", origin: "Ecuador" },
+  { num: 6, str: "avocados", origin: "Mexico" },
+  { num: 4, str: "pineapple", origin: "Brazil" },
+  { num: 3, str: "blueberries", origin: "Chile" },
+  { num: 9, str: "pears", origin: "Oregon" },
+  { num: 1, str: "cantaloupe", origin: "California" }
+];
 
 const people = [
   { fname: "Alex", lname: "Smith", province: "BC", age: 33 },

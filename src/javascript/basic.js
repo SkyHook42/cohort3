@@ -1,4 +1,4 @@
-console.log("Hello World from basic.js");
+	console.log("Hello World from basic.js");
 
 function onButtonClicked() {
   console.log("inside the button click event");

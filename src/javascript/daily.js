@@ -11,6 +11,21 @@ const functions = {
   },
   // #endregion Destructuring-assignment - November 26, 2019
 
+  // #region Three ways of functions - November 22, 2019
+
+  // Write 3 functions (with tests):  1) Anonymous function 2) Named function, 3) Arrow function.
+  // Write these functions to complete the following exercise.  
+  // Sort the array:
+  // By number ascending, using anonymous function
+  // By fruit alphabetic, using named function
+  // By origin reverse alphabetic, using arrow function
+
+  // Here are some links to help with the sort:
+  // https://www.youtube.com/watch?v=JJ9H0n8PRQc
+  // https://www.youtube.com/watch?v=zVevl-K-m7Y    
+
+  // #endregion Three ways of functions - November 22, 2019
+
   // #region November 21, 2019 - Callback Exercise (Part 2)
   fTotAvg: (arrIn, fCall) => {
     let objOut = {};
