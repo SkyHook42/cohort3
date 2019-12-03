@@ -53,29 +53,55 @@ const Controller = class {
   }
 
   // in the controller class create methods:
-  // “whichSphere” to return either the Northern Hemisphere or Southern Hemisphere
-  whichSphere() {
-    let sHemiSphere = "";
-    return sHemiSphere;
+  // “whichSphere” to return either the Northern Hemisphere or Southern Hemisphere--"for any given city"
+  whichSphere(sCheck) {
+    let sHemi;
+    let compare = this.cities.filter(city => city.name == sCheck)[0];
+    if (compare.lat > 0) {
+      sHemi = "Northern Hemisphere";
+    } else if (compare.lat < 0) {
+      sHemi = "Southern Hemisphere";
+    } else {
+      sHemi = "Equatorial";
+    }
+    return sHemi;
   }
 
   // createCity
-  createCity(sName, nLat, nLong, nPop){
+  createCity(sName, nLat, nLong, nPop) {
     const city = new City(sName, nLat, nLong, nPop);
     this.cities.push(city);
   }
-  
+
   // getMostNorthern
-  getMostNorthern(){
-    // points.sort(function(a, b){return a - b});
-
-    const city = this.cities.sort[];
-    this.cities.push(city);
+  getMostNorthern() {
+    const arrCityN = this.cities.sort(function (a, b) {
+      return Number(b.lat - a.lat);
+    });
+    return arrCityN[0].name;
   }
-  // getMostSouthern
-  // getPopulation ⇒ total for all…
-  // deleteCity
 
+  // getMostSouthern
+  getMostSouthern() {
+    const arrCityS = this.cities.sort(function (a, b) {
+      return Number(a.lat - b.lat);
+    });
+    return arrCityS[0].name;
+  }
+
+  // getPopulation ⇒ total for all…
+  getPopulation() {
+    const cityTotPop = this.cities.reduce((sum, city) => {
+      return sum + Number(city.pop)
+    }, 0);
+    return cityTotPop;
+  }
+
+  // deleteCity
+  deleteCity(cityIn) {
+    this.cities = this.cities.filter(city => city.name != cityIn);
+    return this.cities;
+  }
 }
 
 export { City, Controller };

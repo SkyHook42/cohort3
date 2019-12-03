@@ -51,23 +51,46 @@ test("city hemi", () => {
 });
 
 // createCity(sName, nLat, nLong, nPop){
-  test("city push", () => {
-    const ctrlr = new Controller();
-    ctrlr.createCity("Shedden",0,0,300);
-    expect(Object.values(ctrlr.cities[0])).toEqual(["Shedden",0,0,300]);
-  });
+test("city push", () => {
+  const ctrlr = new Controller();
+  ctrlr.createCity("Shedden", 0, 0, 300);
+  expect(Object.values(ctrlr.cities[0])).toEqual(["Shedden", 0, 0, 300]);
+});
 
-  test("city north", () => {
-    const ctrlr = new Controller();
-    ctrlr.createCity("Shedden",0,0,300);
-    ctrlr.createCity("Calgary",10,-10,500);
-    ctrlr.createCity("Edmonchuck",200,-20,17);
-    expect(ctrlr.getMostNorthern).toEqual("Edmonchuck");
-  });
+test("city north", () => {
+  const ctrlr = new Controller();
+  ctrlr.createCity("Shedden", 0, 0, 300);
+  ctrlr.createCity("Calgary", 10, -10, 500);
+  ctrlr.createCity("Edmonchuck", 200, -20, 17);
+  expect(ctrlr.getMostNorthern()).toEqual("Edmonchuck");
+  expect(ctrlr.getMostSouthern()).toEqual("Shedden");
+  expect(ctrlr.getPopulation()).toEqual(817);
+  ctrlr.deleteCity("Edmonchuck");
+  const result = ctrlr.cities.filter(city => city.name == "Edmonchuck");
+  expect(result).toEqual([]);
+  expect(ctrlr.whichSphere("Shedden")).toBe("Equatorial");
+});
 
-  // test("city push", () => {
-  //   const ctrlr = new Controller();
-  //   ctrlr.createCity("Shedden",0,0,300);
-  //   expect(Object.values(ctrlr.cities[0])).toEqual(["Shedden",0,0,300]);
-  // });
-      
+// write a test that creates a city “myCity”
+// make myFav = myCity
+// check the population of both references
+// add some population to one of the references
+// check the population of both references
+// what happened and why
+// create a test to make sure it keeps working
+
+test("city reference", () => {
+  // const ctrlr = new Controller();
+  let myCity = new City("myCity", 0, 0, 300);
+  let myFav = myCity;
+  expect(myCity.pop).toEqual(300);
+  expect(myFav.pop).toEqual(300);
+  myFav.pop = myFav.pop + 10;
+  expect(myCity.pop).toEqual(310);
+  expect(myFav.pop).toEqual(310);
+  let myWaste = myFav;
+  myWaste.pop = myWaste.pop + 10;
+  expect(myCity.pop).toEqual(320);
+  expect(myFav.pop).toEqual(320);
+  expect(myWaste.pop).toEqual(320);
+});
