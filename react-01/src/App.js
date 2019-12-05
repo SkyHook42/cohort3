@@ -24,6 +24,7 @@ class App extends React.Component {
 
   //   From App.js pass a parameter called “whatToSay” to your new “MyComponent”. Hard code the value of “What Ever”.
   // In MyComponent show the parameter on the heading
+  // pass the address of “onPushMe” method to MyComponent
 
   render() {
     return (
@@ -34,7 +35,7 @@ class App extends React.Component {
           <button onClick={this.onPushMe}>
             Push Me
           </button>
-          <MyComp whatToSay="rendering." />
+          <MyComp whatToSay="rendering." onPushy={this.onPushMe} />
           <p>
             Edit <code>src/App.js</code> and save to reload.
         </p>
