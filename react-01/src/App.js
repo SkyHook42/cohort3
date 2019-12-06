@@ -42,8 +42,6 @@ class App extends React.Component {
             Push Me
           </button>
           <MyComp whatToSay="rendering." onPushy={this.onPushMe} />
-          {/* <MyComp whatToSay="rendering." onPushy={this.onPushMe} /> */}
-          {/* conditional EvenComponent><OddComponent */}
           <p>
             Edit <code>src/App.js</code> and save to reload.
         </p>
