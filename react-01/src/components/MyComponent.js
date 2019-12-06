@@ -14,19 +14,4 @@ class MyComp extends React.Component {
     )
   }
 }
-
-// Create two new components EvenComponent and OddComponent with a heading that says what they are.
-// In App.js Show all three:  MyComponent, EvenComponent and OddComponent
-class EvenComponent extends React.Component {
-  render() {
-  }
-}
-
-class OddComponent extends React.Component {
-  render() {
-  }
-}
-// All is well except:
-// Only show Even when counter is even and Odd when counter is Odd
-
 export default MyComp;

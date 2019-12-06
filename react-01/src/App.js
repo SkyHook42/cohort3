@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MyComp from './components/MyComponent.js';
+import EvenShow from './components/EvenComponent.js';
+import OddShow from './components/OddComponent.js';
 
 class App extends React.Component {
   constructor() {
@@ -31,11 +33,17 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>I am in control of this application and my name is Bilbo. Push Me #{this.counter} {this.state.myState}</h1>
+
+        <EvenShow count={this.counter}/>
+        <OddShow count={this.counter}/>
+
+          <h1>I am in control of this application and my name is Bilbo Baggins. Push Me #{this.counter} {this.state.myState}</h1>
           <button onClick={this.onPushMe}>
             Push Me
           </button>
           <MyComp whatToSay="rendering." onPushy={this.onPushMe} />
+          {/* <MyComp whatToSay="rendering." onPushy={this.onPushMe} /> */}
+          {/* conditional EvenComponent><OddComponent */}
           <p>
             Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -52,5 +60,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
