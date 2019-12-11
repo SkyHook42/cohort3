@@ -22,6 +22,11 @@
   }
 }
 
+.cNavSpin {
+  height: 15vmin;
+  fill: red;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
