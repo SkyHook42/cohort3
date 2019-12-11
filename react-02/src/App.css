@@ -7,24 +7,46 @@
   pointer-events: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }  
+  to {
+    transform: rotate(360deg);
+  }  
+}  
+
 .cNavSpin {
   height: 15vmin;
   fill: red;
+}
+
+.cNavSpin:hover {
+  fill: yellowgreen;
+}
+a:hover {
+  fill: yellowgreen;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cNavSpin {
+    animation: cNavSpin-spin infinite 10s ease-in-out;
+  }
+}
+
+@keyframes cNavSpin-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .App-header {

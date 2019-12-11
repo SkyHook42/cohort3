@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="cNav">
+        <div id="iNavBar" className="cNav">
           <img src={heart} className="cNavSpin" alt="heart" />
           <img src={recycle} className="cNavSpin" alt="recycle" />
           <img src={percentage} className="cNavSpin" alt="percentage" />
