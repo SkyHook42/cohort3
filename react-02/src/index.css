@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.cIcons {
+  transform: rotate(360deg);
+  animation: mvRotate .05 infinite;
+}
+
+@keyframes mvRotate {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
