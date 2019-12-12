@@ -14,20 +14,22 @@ class App extends React.Component {
   }
 
   handleClick = e => {
-    console.log(e.target.alt)
+    // console.log(e.target.alt)
+    // let eTarget = <tempDiv> Icon selected = {e.target.alt}</tempDiv>
   }
 
   render() {
+    // var eTarget;
     return (
       <div className="App">
-        <navDiv id="iNavBar" className="cNav">
+        <div id="iNavBar" className="cNav">
           <img src={heart} className="cNavSpin" alt="heart" onClick={this.handleClick} />
           <img src={recycle} className="cNavSpin" alt="recycle" onClick={this.handleClick} />
           <img src={percentage} className="cNavSpin" alt="percentage" onClick={this.handleClick} />
           <img src={cross} className="cNavSpin" alt="cross" onClick={this.handleClick} />
           <img src={foot} className="cNavSpin" alt="foot" onClick={this.handleClick} />
           <img src={biohazard} className="cNavSpin" alt="biohazard" onClick={this.handleClick} />
-        </navDiv>
+        </div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

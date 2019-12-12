@@ -26,29 +26,24 @@
   height: 100px;
   fill: red;
   margin: 20px;
-  /* width: 1; */
-  /* display: inline; */
-  /* width: 15%; */
-  /* text-align: center; */
-  /* div{height:50px;} */
-/* .menu { display: flex; justify-content: space-between; } */
-/* inline-block
-display: flex; justify-content: space-around; */
 }
 
 .cNav {
-
+  background-color: #282c34;
+  width: 100%;
 }
 
 .cNavSpin:hover {
   background-color: yellowgreen;
-  /* --playState: "paused"; */
-  /* fill: yellowgreen; */
+}
+
+.cNavSpin:active {
+  background-color: rgb(60, 50, 205);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .cNavSpin {
-    animation: cNavSpin-spin infinite 10s ease-in-out;
+    animation: cNavSpin-spin infinite 8s ease-in-out;
   }
 }
 
