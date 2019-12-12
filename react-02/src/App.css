@@ -16,22 +16,34 @@
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
-  }  
+  }
   to {
     transform: rotate(360deg);
-  }  
-}  
+  }
+}
 
 .cNavSpin {
-  height: 15vmin;
+  height: 100px;
   fill: red;
+  margin: 20px;
+  /* width: 1; */
+  /* display: inline; */
+  /* width: 15%; */
+  /* text-align: center; */
+  /* div{height:50px;} */
+/* .menu { display: flex; justify-content: space-between; } */
+/* inline-block
+display: flex; justify-content: space-around; */
+}
+
+.cNav {
+
 }
 
 .cNavSpin:hover {
-  fill: yellowgreen;
-}
-a:hover {
-  fill: yellowgreen;
+  background-color: yellowgreen;
+  /* --playState: "paused"; */
+  /* fill: yellowgreen; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
