@@ -35,6 +35,7 @@
 
 .cNavSpin:active {
   filter: invert(100%);
+  /* fill: #72D3FF; */
 }
 
 @media (prefers-reduced-motion: no-preference) {

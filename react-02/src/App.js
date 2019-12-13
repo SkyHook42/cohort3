@@ -1,4 +1,5 @@
 import React from 'react';
+import Game from './components/Game.js';
 import './App.css';
 import logo from './logo.svg';
 import heart from './graphics/heart.svg';
@@ -44,6 +45,7 @@ class App extends React.Component {
             Learn React
           </a>
         </header>
+        <Game />
       </div>
     );
   }
