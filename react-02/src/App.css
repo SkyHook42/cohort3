@@ -33,17 +33,19 @@
   width: 100%;
 }
 
-.cNavSpin:hover {
-  background-color: yellowgreen;
-}
-
 .cNavSpin:active {
-  background-color: rgb(60, 50, 205);
+  filter: invert(100%);
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .cNavSpin {
-    animation: cNavSpin-spin infinite 8s ease-in-out;
+    animation: cNavSpin-spin infinite 14s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cNavSpin:hover {
+    animation: 0;
   }
 }
 
