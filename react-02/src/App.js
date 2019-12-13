@@ -2,8 +2,8 @@ import React from 'react';
 import Game from './components/Game.js';
 import './App.css';
 import logo from './logo.svg';
-import heart from './graphics/heart.svg';
-import recycle from './graphics/recycle.svg';
+import gHeart from './graphics/heart.svg';
+import gGame from './graphics/recycle.svg';
 import percentage from './graphics/percentage.svg';
 import cross from './graphics/cross.svg';
 import foot from './graphics/foot.svg';
@@ -24,8 +24,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <div id="iNavBar" className="cNav">
-          <img src={heart} className="cNavSpin" alt="heart" onClick={this.handleClick} />
-          <img src={recycle} className="cNavSpin" alt="recycle" onClick={this.handleClick} />
+          <img src={gHeart} className="cNavSpin" alt="heart" onClick={this.handleClick} />
+          <img src={gGame} className="cNavSpin" alt="recycle" onClick={this.handleClick} />
           <img src={percentage} className="cNavSpin" alt="percentage" onClick={this.handleClick} />
           <img src={cross} className="cNavSpin" alt="cross" onClick={this.handleClick} />
           <img src={foot} className="cNavSpin" alt="foot" onClick={this.handleClick} />
