@@ -37,11 +37,6 @@
   filter: invert(100%);
 }
 
-/* .cNavSpin:active path {
-  filter: invert(100%);
-  fill: rgb(173, 255, 170);
-} */
-
 @media (prefers-reduced-motion: no-preference) {
   .cNavSpin {
     animation: cNavSpin-spin infinite 14s linear;
