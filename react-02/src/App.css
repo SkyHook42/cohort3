@@ -35,8 +35,12 @@
 
 .cNavSpin:active {
   filter: invert(100%);
-  /* fill: #72D3FF; */
 }
+
+/* .cNavSpin:active path {
+  filter: invert(100%);
+  fill: rgb(173, 255, 170);
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .cNavSpin {

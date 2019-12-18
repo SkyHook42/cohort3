@@ -19,6 +19,7 @@ class App extends React.Component {
 
   navClick = e => {
     this.setState({ activePage: e.target.alt })
+    console.log(e.target.getAttribute("alt"));
   }
 
   render() {

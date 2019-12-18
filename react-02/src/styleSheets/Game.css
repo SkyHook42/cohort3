@@ -18,10 +18,11 @@ ol, ul {
 }
 
 .square {
+  font-family: 'Caveat Brush', cursive;
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 160px;
   font-weight: bold;
   line-height: 34px;
   height: 150px;
