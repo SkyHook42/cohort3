@@ -21,6 +21,7 @@ ol, ul {
 
 .square {
   font-family: 'Caveat Brush', cursive;
+  color: red;
   background: #fff;
   border: 1px solid #999;
   float: left;
