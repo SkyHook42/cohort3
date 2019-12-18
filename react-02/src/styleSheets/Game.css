@@ -15,14 +15,16 @@ ol, ul {
 }
 
 .status {
+  font-size: 200%;
+  text-align: left ;
   margin-bottom: 10px;
-  color: #61dafb;
+  color: #fff;
 }
 
 .square {
   font-family: 'Caveat Brush', cursive;
   color: red;
-  background: #fff;
+  background: #61dafb;
   border: 1px solid #999;
   float: left;
   font-size: 160px;
