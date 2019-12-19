@@ -1,5 +1,4 @@
 body {
-  font-family: 'Open Sans', sans-serif;
   background-color: #282c34;
   text-align: center;
 }
@@ -15,6 +14,7 @@ ol, ul {
 }
 
 .status {
+  font-family: 'Open Sans', sans-serif;
   font-size: 200%;
   text-align: left;
   margin-bottom: 10px;
@@ -54,11 +54,7 @@ ol, ul {
 }
 
 .game-board {
-  /* margin-left: 20px; */
   display: inline-block;
-  /* font-size: 150%; */
-  /* text-align: left ; */
-  /* margin-bottom: 10px; */
   color: #fff;
 }
 
@@ -68,6 +64,5 @@ ol, ul {
   display: inline-block;
   font-size: 150%;
   text-align: left;
-  /* margin-bottom: 10px; */
   color: #fff;
 }
