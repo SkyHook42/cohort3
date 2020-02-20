@@ -43,7 +43,7 @@ CREATE TABLE "officer" (
 CREATE TABLE "incident_crime" (
   "id" serial PRIMARY KEY,
   "incident_id" int,
-  "crime_id" int
+  "crime_id" char(255)
 );
 
 CREATE TABLE "precinct" (
@@ -54,13 +54,8 @@ CREATE TABLE "precinct" (
 );
 
 ALTER TABLE "incident_suspect" ADD FOREIGN KEY ("suspect_id") REFERENCES "suspect" ("id");
-
 ALTER TABLE "incident" ADD FOREIGN KEY ("investigator_id") REFERENCES "officer" ("id");
-
 ALTER TABLE "officer" ADD FOREIGN KEY ("precinct_assign") REFERENCES "precinct" ("id");
-
 ALTER TABLE "incident_suspect" ADD FOREIGN KEY ("incident_id") REFERENCES "incident" ("id");
-
 ALTER TABLE "incident_crime" ADD FOREIGN KEY ("incident_id") REFERENCES "incident" ("id");
-
 ALTER TABLE "incident_crime" ADD FOREIGN KEY ("crime_id") REFERENCES "crime" ("id");
